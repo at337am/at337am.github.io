@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on at337am</title>
+    <link>https://at337am.github.io/post/</link>
+    <description>Recent content in Posts on at337am</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Thu, 20 Jun 2024 19:53:55 +0800</lastBuildDate>
+    <atom:link href="https://at337am.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>各种...记忆方法</title>
+      <link>https://at337am.github.io/post/misc/m3/</link>
+      <pubDate>Thu, 20 Jun 2024 19:53:55 +0800</pubDate>
+      <guid>https://at337am.github.io/post/misc/m3/</guid>
+      <description>现代人有点太喜欢往自己脑子里放奇怪的东西了。 从小开始，书里就有一些奇怪的记忆法，什么生肖儿歌，取首字母组合之类的。 面对成年人也有离谱小故事记单词，音乐学习法，记忆宫殿这种成年人的玩法。&#xA;效果确实很好，不过我宁愿自己脑子空空的，也不想往自己记忆里放这种奇怪的东西。 完全不想要 从某个单词就立马想到各种乱交、杀人小故事或者脑子里响起奇怪的音乐。</description>
+    </item>
+    <item>
+      <title>🐋 冲浪分享 02</title>
+      <link>https://at337am.github.io/post/surf/s2/</link>
+      <pubDate>Thu, 13 Jun 2024 03:37:00 +0800</pubDate>
+      <guid>https://at337am.github.io/post/surf/s2/</guid>
+      <description>lingobell&#xA;立志做最可爱的学习网站&#xA;并且在这里你能学到最地道的英语，需要注册登录&#xA;地址：lingobell&#xA;计数挑战&#xA;挑战你的记忆极限，一个很简单的计数小游戏，挺好玩的。&#xA;地址：计数挑战&#xA;一个朋友&#xA;一个免费 VPN 推荐网站。涵盖免费机场、加速器等。可以在这里找到价格折扣、促销活动以及免费试用的机会。&#xA;地址：一个朋友&#xA;Logo Galleria&#xA;基于 AI 的 LOGO 生成工具，可设置主要图案和文字，并可添加负面提示，生成速度较慢，效果蛮不错的，免费下载，无需注册。&#xA;地址：Logo Galleria</description>
+    </item>
+    <item>
+      <title>学了十二年 Office</title>
+      <link>https://at337am.github.io/post/misc/m2/</link>
+      <pubDate>Thu, 06 Jun 2024 00:02:05 +0800</pubDate>
+      <guid>https://at337am.github.io/post/misc/m2/</guid>
+      <description>小学的电脑课：学生乱玩，老师乱讲&#xA;初中的电脑课：学生乱玩，老师讲 Office 三件套&#xA;高中的电脑课：学生乱玩，老师讲 Office 三件套&#xA;大学的学生：C 盘满了怎么办？压缩包怎么解压不了？电脑怎么重装？&#xA;还需要大学专门开一门计算机基础课来填补空白，但是还是 Office 三件套&#xA;就……Word、Excel、PPT 贯穿了整个 12 年义务教育和大学计算机基础课，也不去教一些 Windows 基础操作、常见文件格式及其打开方式、常见计算机问题处理办法、重装系统等一系列应该在十二年义务教育中被教会的内容。&#xA;应试教育虽然不好，但要是作用在计算机基础操作和排障上也不至于导致现在大学生的基础知识这么匮乏。&#xA;软件使用方法没有那么重要，只要学会了基础的互联网检索，软件怎么用自然有视频教程和文字教程，计算机基础才是最致命的问题。</description>
+    </item>
+    <item>
+      <title> 🐋 冲浪分享 01</title>
+      <link>https://at337am.github.io/post/surf/s1/</link>
+      <pubDate>Tue, 21 May 2024 00:52:37 +0800</pubDate>
+      <guid>https://at337am.github.io/post/surf/s1/</guid>
+      <description>🥳 docker-xiaoya - 一键自动化小雅全家桶部署&#xA;项目功能：媒体库自动化部署&#xA;项目介绍：一个使用 Docker Compose 以更优雅的方式来部署小雅服务，支持一键部署 Alist + Emby + Jellyfin，全平台支持，Linux/Windows/Mac/群晖，X86/Arm 架构。&#xA;支持部署 Alist+下载元数据+部署 Emby/Jellyfin 服务全流程自动，无需人工干预。&#xA;项目亮点：&#xA;所有脚本集成到 Docker 镜像，避免污染系统环境 合并 jellyfin 和 emby 的 x86 和 arm 镜像，部署时无需区分镜像名 集成云盘清理脚本到 alist 服务，无需单独部署 通过环境变量配置阿里云盘 token，无需映射文件 jellyfin 和 emby 启动时自动进行依赖检查，等待元数据下载完成，自动添加 hosts 完全兼容所有能运行 docker 的 x86 和 arm 设备 支持自动清理阿里云盘，自动同步小雅元数据 自动更新内部的 alist，emby，jellyfin 访问地址，无需手动配置 通过 metadata 服务自动更新 emby 配置和元数据 项目地址：点击打开&#xA;💬 TurboSeek - 类 Perplexity 开源 AI 搜索引擎&#xA;网站功能：AI 搜索引擎</description>
+    </item>
+    <item>
+      <title>v2rayA for Docker</title>
+      <link>https://at337am.github.io/post/guide/g4/</link>
+      <pubDate>Fri, 10 May 2024 00:00:01 +0800</pubDate>
+      <guid>https://at337am.github.io/post/guide/g4/</guid>
+      <description>水字数 v2rayA 是一个支持全局透明代理的 V2Ray 客户端，同时兼容 SS、SSR、Trojan(trojan-go)、Tuic 与 Juicity 协议。&#xA;v2rayA 致力于提供最简单的操作，满足绝大部分需求。&#xA;得益于 Web 客户端的优势，你不仅可以将其用于本地计算机，还可以轻松地将它部署在路由器或 NAS 上。&#xA;项目地址：GitHub&#xA;官方文档：v2rayA&#xA;docker-compose.yml services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: true network_mode: host container_name: v2raya environment: - V2RAYA_LOG_FILE=/tmp/v2raya.log - V2RAYA_V2RAY_BIN=/usr/local/bin/xray - V2RAYA_NFTABLES_SUPPORT=off - IPTABLES_MODE=legacy volumes: - /lib/modules:/lib/modules:ro - /etc/resolv.conf:/etc/resolv.conf - /etc/v2raya:/etc/v2raya 服务启动后，访问 http://localhost:2017 进入管理面板。</description>
+    </item>
+    <item>
+      <title>RustDesk 自建服</title>
+      <link>https://at337am.github.io/post/guide/g3/</link>
+      <pubDate>Sat, 27 Apr 2024 00:00:01 +0800</pubDate>
+      <guid>https://at337am.github.io/post/guide/g3/</guid>
+      <description>水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。&#xA;适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki&#xA;docker-compose.yml networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP</description>
+    </item>
+    <item>
+      <title>PCDN、WebRTC</title>
+      <link>https://at337am.github.io/post/guide/g2/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:01 +0800</pubDate>
+      <guid>https://at337am.github.io/post/guide/g2/</guid>
+      <description>解决网页端 B 站偷跑 PCDN PCDN 是一种内容分发网络技术，通过用户之间的 P2P（点对点）连接来共享和分发内容。BiliBili 网页端使用 PCDN 来分担服务器压力和提高内容分发效率。&#xA;PCDN 的潜在坏处：&#xA;占用带宽：PCDN 会利用用户的上传带宽，可能导致其他网络活动变慢。 安全隐患：由于涉及 P2P 连接，可能带来安全和隐私风险。 不稳定的观看体验：PCDN 的性能依赖于其他用户的上传速度，可能导致视频加载速度和质量不稳定。 上述内容由 GPT 回答&#xA;解决办法：使用脚本 - Make BiliBili Great Again&#xA;防止 WebRTC 泄露真实 IP 地址 WebRTC 是一种允许网页浏览器进行实时语音、视频通信和 P2P 文件共享的技术。它通过浏览器内置的 API 实现，不需要额外插件。&#xA;WebRTC 的潜在坏处：&#xA;IP 地址泄露：WebRTC 可以绕过传统的隐私保护措施，直接暴露用户的真实 IP 地址，即使在使用 VPN 时也可能被泄露。 隐私风险：通过获取用户的真实 IP 地址，网站和恶意攻击者可以追踪用户的真实位置，降低隐私保护。 安全漏洞：WebRTC 的实时通信特性可能被利用进行网络攻击，尤其是在配置不当或未加密的情况下。 上述内容由 GPT 回答&#xA;解决办法：使用插件- WebRTC Control&#xA;via V2EX - b 站网页端也会开启 PCDN？</description>
+    </item>
+    <item>
+      <title>依附的自由</title>
+      <link>https://at337am.github.io/post/misc/m1/</link>
+      <pubDate>Sat, 03 Feb 2024 03:37:00 +0800</pubDate>
+      <guid>https://at337am.github.io/post/misc/m1/</guid>
+      <description>依附的自由（Collateral freedom）这种说法最早源自 OpenITP 团队编写的报告 Collateral freedom - A Snapshot of Chinese Internet Users Circumventing Censorship。&#xA;该报告研究了当时大陆的网络用户翻墙状况，当时 2013 年最流行的工具是 GoAgent，GoAgent 是使用 Python 和 Google Appengine SDK 编写的代理软件，特点是利用了 Google 的服务器、域名和 IP，而 GFW 当时没有足够能力，在不影响正常使用 Google 云服务器的网站的情况下，封禁 GoAgent。&#xA;这就算是依附的自由，这样的状况直到 Google 绝大多数服务被封锁的那一天。&#xA;最初的 GFW 没有打击各种 Proxy（代理）工具并没有用尽全力，可能是考虑到使用 Proxy 的用户，需要从事外贸等。这算是依附的自由。&#xA;之后常见的 Socks、PPTP、L2TP 等烂大街协议，开始被限制，不过 Cisco AnyConnect 被刻意忽略了较长时间。可能是因为 Cisco AnyConnect 用户的价值更高，所以这段时间，第三方开发者编写的兼容端 OpenConnect 能够获得不错的效果。这也算是依附的自由。&#xA;（从特殊时间〔比如开会〕，大多数工具难以连接来看，GFW 有能力禁止大多工具，只是考虑到影响，没有这么做）&#xA;SNI 是 Server Name Indication（服务器名称指示）的缩写，SNI 会找 TLS 握手时明文传输，目的是让共用 IP 地址和 TCP 端口号的网站能被区别，但也因为 SNI 会明文传输，所以会因为深度包检测而被发现、封禁。</description>
+    </item>
+    <item>
+      <title>QUIC、Shadowsocks</title>
+      <link>https://at337am.github.io/post/guide/g1/</link>
+      <pubDate>Wed, 25 Oct 2023 03:37:00 +0800</pubDate>
+      <guid>https://at337am.github.io/post/guide/g1/</guid>
+      <description>限制 QUIC QUIC 是 Google 设计的传输层网络协议，基于 UDP，目的是解决 TCP 性能较低的问题。&#xA;2017 年，Google 开始在 YouTube 上少量测试 QUIC（HTTP/3）传输视频流，而在当时只要解决 DNS 污染问题，就可以直连 YouTube 服务器观看视频。&#xA;不过很快 QUIC 就被 GFW 限制或封锁了，无法再直连观看 YouTube。以至于需要关闭浏览器的 QUIC 功能，避免被运营商针对 UDP 干扰影响。（一种 QoS）&#xA;因为这种 QoS 被认为是 GFW 干扰 UDP/QUIC 的手段，并且早期的 Proxy 工具，比如 Shadowsocks 不会让 UDP Over TCP，所以出现 QUIC 连接时，SS 客户端会以 UDP 与服务端通讯，结果 UDP 连接可能会因为 QoS 而非常不稳定，或是直接中断。&#xA;摘自：ggame&#xA;关闭 Chrome 浏览器 QUIC 协议 关闭方法：在 Chrome 地址栏输入 chrome://flags，搜索 quic，将 &amp;ldquo;Experimental QUIC protocol&amp;rdquo; 设为 Disabled，然后重新启动浏览器。&#xA;via V2EX - 关闭 Chrome 浏览器 QUIC 协议，让 YouTube 视频更流畅？</description>
+    </item>
+  </channel>
+</rss>

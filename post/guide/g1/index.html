@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  
+  <title>
+    QUIC、Shadowsocks | at337am
+  </title>
+  <meta
+    name="description"
+    content="限制 QUIC QUIC 是 Google 设计的传输层网络协议，基于 UDP，目的是解决 TCP 性能较低的问题。
+2017 年，Google 开始在 YouTube 上少量测试 QUIC（HTTP/3）传输视频流，而在当时只要解决 DNS 污染问题，就可以直连 YouTube 服务器观看视频。
+不过很快 QUIC 就被 GFW 限制或封锁了，无法再直连观看 YouTube。以至于需要关闭浏览器的 QUIC 功能，避免被运营商针对 UDP 干扰影响。（一种 QoS）
+因为这种 QoS 被认为是 GFW 干扰 UDP/QUIC 的手段，并且早期的 Proxy 工具，比如 Shadowsocks 不会让 UDP Over TCP，所以出现 QUIC 连接时，SS 客户端会以 UDP 与服务端通讯，结果 UDP 连接可能会因为 QoS 而非常不稳定，或是直接中断。
+摘自：ggame
+关闭 Chrome 浏览器 QUIC 协议 关闭方法：在 Chrome 地址栏输入 chrome://flags，搜索 quic，将 &ldquo;Experimental QUIC protocol&rdquo; 设为 Disabled，然后重新启动浏览器。
+via V2EX - 关闭 Chrome 浏览器 QUIC 协议，让 YouTube 视频更流畅？"
+  />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="https://at337am.github.io/svg/favicon.svg"
+  />
+  <link rel="canonical" href="https://at337am.github.io/post/guide/g1/" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+  />
+  
+  <link rel="stylesheet" href="https://at337am.github.io/scss/style.min.30aaa64ab6d30093ff4c0b2d790a404f01d470f6f346bde4475b59c564599ba3.css" />
+
+  <meta property="og:url" content="https://at337am.github.io/post/guide/g1/">
+  <meta property="og:site_name" content="at337am">
+  <meta property="og:title" content="QUIC、Shadowsocks">
+  <meta property="og:description" content="限制 QUIC QUIC 是 Google 设计的传输层网络协议，基于 UDP，目的是解决 TCP 性能较低的问题。
+2017 年，Google 开始在 YouTube 上少量测试 QUIC（HTTP/3）传输视频流，而在当时只要解决 DNS 污染问题，就可以直连 YouTube 服务器观看视频。
+不过很快 QUIC 就被 GFW 限制或封锁了，无法再直连观看 YouTube。以至于需要关闭浏览器的 QUIC 功能，避免被运营商针对 UDP 干扰影响。（一种 QoS）
+因为这种 QoS 被认为是 GFW 干扰 UDP/QUIC 的手段，并且早期的 Proxy 工具，比如 Shadowsocks 不会让 UDP Over TCP，所以出现 QUIC 连接时，SS 客户端会以 UDP 与服务端通讯，结果 UDP 连接可能会因为 QoS 而非常不稳定，或是直接中断。
+摘自：ggame
+关闭 Chrome 浏览器 QUIC 协议 关闭方法：在 Chrome 地址栏输入 chrome://flags，搜索 quic，将 “Experimental QUIC protocol” 设为 Disabled，然后重新启动浏览器。
+via V2EX - 关闭 Chrome 浏览器 QUIC 协议，让 YouTube 视频更流畅？">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2023-10-25T03:37:00+08:00">
+    <meta property="article:modified_time" content="2023-10-25T03:37:00+08:00">
+ 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="QUIC、Shadowsocks">
+  <meta name="twitter:description" content="限制 QUIC QUIC 是 Google 设计的传输层网络协议，基于 UDP，目的是解决 TCP 性能较低的问题。
+2017 年，Google 开始在 YouTube 上少量测试 QUIC（HTTP/3）传输视频流，而在当时只要解决 DNS 污染问题，就可以直连 YouTube 服务器观看视频。
+不过很快 QUIC 就被 GFW 限制或封锁了，无法再直连观看 YouTube。以至于需要关闭浏览器的 QUIC 功能，避免被运营商针对 UDP 干扰影响。（一种 QoS）
+因为这种 QoS 被认为是 GFW 干扰 UDP/QUIC 的手段，并且早期的 Proxy 工具，比如 Shadowsocks 不会让 UDP Over TCP，所以出现 QUIC 连接时，SS 客户端会以 UDP 与服务端通讯，结果 UDP 连接可能会因为 QoS 而非常不稳定，或是直接中断。
+摘自：ggame
+关闭 Chrome 浏览器 QUIC 协议 关闭方法：在 Chrome 地址栏输入 chrome://flags，搜索 quic，将 “Experimental QUIC protocol” 设为 Disabled，然后重新启动浏览器。
+via V2EX - 关闭 Chrome 浏览器 QUIC 协议，让 YouTube 视频更流畅？">
+ 
+  
+  
+  
+</head>
+<body><nav class="navbar is-light" role="navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" title="home" class="navbar-item">
+                <span class="logo">
+                    <h1>at337am</h1>
+                </span>
+            </a>
+
+            
+            <a id="theme-toggle" class="theme-toggle" href="#">
+                <img src="https://at337am.github.io/svg/sun.svg" alt="sun icon" class="theme-icon" />
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                
+                <a href="/hello" class="navbar-item">前言</a>
+                
+                <a href="/topics" class="navbar-item">书签</a>
+                
+                <a href="/post" class="navbar-item">归档</a>
+                
+            </div>
+
+        </div>
+        <div class="search">
+            <div id="fastSearch">
+                <input id="searchInput" tabindex="0" placeholder="Search...">
+                <ul id="searchResults">
+
+                </ul>
+            </div>
+            <a id="search-btn" style="display: inline-block;" href="# ">
+                <div class="icon-search"><svg class="search-svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+            </a>
+        </div>
+
+        <script src="/js/fuse.min.js"></script> 
+        <script src="/js/fastsearch.js"></script>
+
+    </div>
+</nav>
+
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var burger = document.querySelector('.navbar-burger');
+        burger.addEventListener('click', function() {
+            burger.classList.toggle('is-active');
+            document.querySelector('.navbar-menu').classList.toggle('is-active');
+        });
+    });
+
+    
+    function setTheme(theme) {
+        let body = document.body;
+        let themeIcon = document.querySelector(".theme-icon");
+        if (theme === "dark") {
+            body.classList.add("dark-mode");
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/moon.svg";
+            themeIcon.alt = "moon icon";
+        } else {
+            body.classList.remove("dark-mode");
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/sun.svg";
+            themeIcon.alt = "sun icon";
+        }
+        
+        localStorage.setItem("theme", theme);
+    }
+
+    
+    let theme = localStorage.getItem("theme") || "light";
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (isDarkMode) {
+        
+        setTheme('dark');
+
+    } else {
+        
+        setTheme('light');
+    }
+    setTheme(theme);
+
+    
+    document.getElementById("theme-toggle").addEventListener("click", function() {
+        if (theme === "light") {
+            theme = "dark";
+        } else {
+            theme = "light";
+        }
+        setTheme(theme);
+    });
+
+
+
+</script>
+
+</header><main>
+
+<div class="single-container">
+    <div class="archive">
+        <h1 class="title is-1">QUIC、Shadowsocks</h1>
+        <div class="title subtitle heading is-6">
+            <div class="author-info columns is-vcentered">
+                <div class="column">
+                    <div class="columns is-vcentered is-mobile">
+                        
+                        <div class="column is-narrow">
+                            <img src="/images/author.webp" class="author-image">
+                        </div>
+                        
+                        <div class="column">
+                            <p>Ji Eun</p>
+                            <p><time>2023/10/25</time>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-topics-container">
+                    
+                        <a href="/topics/-%E9%A3%9F%E7%94%A8%E7%AC%94%E8%AE%B0">📔 食用笔记</a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="content article-content">
+            <h4 id="限制-quic">限制 QUIC</h4>
+<p>QUIC 是 Google 设计的传输层网络协议，基于 UDP，目的是解决 TCP 性能较低的问题。</p>
+<p>2017 年，Google 开始在 YouTube 上少量测试 QUIC（HTTP/3）传输视频流，而在当时只要解决 DNS 污染问题，就可以直连 YouTube 服务器观看视频。</p>
+<p>不过很快 QUIC 就被 GFW 限制或封锁了，无法再直连观看 YouTube。以至于需要关闭浏览器的 QUIC 功能，避免被运营商针对 UDP 干扰影响。（一种 QoS）</p>
+<p>因为这种 QoS 被认为是 GFW 干扰 UDP/QUIC 的手段，并且早期的 Proxy 工具，比如 Shadowsocks 不会让 UDP Over TCP，所以出现 QUIC 连接时，SS 客户端会以 UDP 与服务端通讯，结果 UDP 连接可能会因为 QoS 而非常不稳定，或是直接中断。</p>
+<p>摘自：<a href="https://ggame.gledos.science/censorship/%E6%8A%80%E6%9C%AF/GFW.html">ggame</a></p>
+<h4 id="关闭-chrome-浏览器-quic-协议">关闭 Chrome 浏览器 QUIC 协议</h4>
+<p><strong>关闭方法</strong>：在 Chrome 地址栏输入 <code>chrome://flags</code>，搜索 quic，将 &ldquo;Experimental QUIC protocol&rdquo; 设为 <code>Disabled</code>，然后重新启动浏览器。</p>
+<p>via <a href="https://v2ex.com/t/843238">V2EX - 关闭 Chrome 浏览器 QUIC 协议，让 YouTube 视频更流畅？</a></p>
+
+        </div>
+    </div>
+    
+    <a href="#" id="scrollToTopButton">
+        <svg t="1686753152588" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="3988" width="48" height="48">
+            <path
+                d="M518.5 360.3c-3.2-4.4-9.7-4.4-12.9 0l-178 246c-3.8 5.3 0 12.7 6.5 12.7H381c10.2 0 19.9-4.9 25.9-13.2L512 460.4l105.2 145.4c6 8.3 15.6 13.2 25.9 13.2H690c6.5 0 10.3-7.4 6.5-12.7l-178-246z"
+                p-id="3989" fill="#363636"></path>
+            <path
+                d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64z m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                p-id="3990" fill="#363636"></path>
+        </svg>
+    </a>
+
+    <div class="pp-container">
+        <section class="pre-and-post">
+            <div class="has-text-left">
+                
+            </div>
+            <div class="has-text-right">
+                
+                <p>next</p>
+                <a href="https://at337am.github.io/post/misc/m1/" class=" hover-underline-animation">依附的自由</a>
+                
+            </div>
+        </section>
+    </div>
+
+</div>
+</main><footer class="footer">
+    <div class="content has-text-centered">
+    <span>🎐 嘘，这里有一只酣睡的小猫 <a href="https://at337am.github.io/">ᓚᘏᗢ zZZ</a></span>
+    </div>
+  </footer></body>
+</html>

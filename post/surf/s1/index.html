@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  
+  <title>
+     🐋 冲浪分享 01 | at337am
+  </title>
+  <meta
+    name="description"
+    content="🥳 docker-xiaoya - 一键自动化小雅全家桶部署
+项目功能：媒体库自动化部署
+项目介绍：一个使用 Docker Compose 以更优雅的方式来部署小雅服务，支持一键部署 Alist &#43; Emby &#43; Jellyfin，全平台支持，Linux/Windows/Mac/群晖，X86/Arm 架构。
+支持部署 Alist&#43;下载元数据&#43;部署 Emby/Jellyfin 服务全流程自动，无需人工干预。
+项目亮点：
+所有脚本集成到 Docker 镜像，避免污染系统环境 合并 jellyfin 和 emby 的 x86 和 arm 镜像，部署时无需区分镜像名 集成云盘清理脚本到 alist 服务，无需单独部署 通过环境变量配置阿里云盘 token，无需映射文件 jellyfin 和 emby 启动时自动进行依赖检查，等待元数据下载完成，自动添加 hosts 完全兼容所有能运行 docker 的 x86 和 arm 设备 支持自动清理阿里云盘，自动同步小雅元数据 自动更新内部的 alist，emby，jellyfin 访问地址，无需手动配置 通过 metadata 服务自动更新 emby 配置和元数据 项目地址：点击打开
+💬 TurboSeek - 类 Perplexity 开源 AI 搜索引擎
+网站功能：AI 搜索引擎"
+  />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="https://at337am.github.io/svg/favicon.svg"
+  />
+  <link rel="canonical" href="https://at337am.github.io/post/surf/s1/" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+  />
+  
+  <link rel="stylesheet" href="https://at337am.github.io/scss/style.min.30aaa64ab6d30093ff4c0b2d790a404f01d470f6f346bde4475b59c564599ba3.css" />
+
+  <meta property="og:url" content="https://at337am.github.io/post/surf/s1/">
+  <meta property="og:site_name" content="at337am">
+  <meta property="og:title" content=" 🐋 冲浪分享 01">
+  <meta property="og:description" content="🥳 docker-xiaoya - 一键自动化小雅全家桶部署
+项目功能：媒体库自动化部署
+项目介绍：一个使用 Docker Compose 以更优雅的方式来部署小雅服务，支持一键部署 Alist &#43; Emby &#43; Jellyfin，全平台支持，Linux/Windows/Mac/群晖，X86/Arm 架构。
+支持部署 Alist&#43;下载元数据&#43;部署 Emby/Jellyfin 服务全流程自动，无需人工干预。
+项目亮点：
+所有脚本集成到 Docker 镜像，避免污染系统环境 合并 jellyfin 和 emby 的 x86 和 arm 镜像，部署时无需区分镜像名 集成云盘清理脚本到 alist 服务，无需单独部署 通过环境变量配置阿里云盘 token，无需映射文件 jellyfin 和 emby 启动时自动进行依赖检查，等待元数据下载完成，自动添加 hosts 完全兼容所有能运行 docker 的 x86 和 arm 设备 支持自动清理阿里云盘，自动同步小雅元数据 自动更新内部的 alist，emby，jellyfin 访问地址，无需手动配置 通过 metadata 服务自动更新 emby 配置和元数据 项目地址：点击打开
+💬 TurboSeek - 类 Perplexity 开源 AI 搜索引擎
+网站功能：AI 搜索引擎">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-05-21T00:52:37+08:00">
+    <meta property="article:modified_time" content="2024-05-21T00:52:37+08:00">
+ 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content=" 🐋 冲浪分享 01">
+  <meta name="twitter:description" content="🥳 docker-xiaoya - 一键自动化小雅全家桶部署
+项目功能：媒体库自动化部署
+项目介绍：一个使用 Docker Compose 以更优雅的方式来部署小雅服务，支持一键部署 Alist &#43; Emby &#43; Jellyfin，全平台支持，Linux/Windows/Mac/群晖，X86/Arm 架构。
+支持部署 Alist&#43;下载元数据&#43;部署 Emby/Jellyfin 服务全流程自动，无需人工干预。
+项目亮点：
+所有脚本集成到 Docker 镜像，避免污染系统环境 合并 jellyfin 和 emby 的 x86 和 arm 镜像，部署时无需区分镜像名 集成云盘清理脚本到 alist 服务，无需单独部署 通过环境变量配置阿里云盘 token，无需映射文件 jellyfin 和 emby 启动时自动进行依赖检查，等待元数据下载完成，自动添加 hosts 完全兼容所有能运行 docker 的 x86 和 arm 设备 支持自动清理阿里云盘，自动同步小雅元数据 自动更新内部的 alist，emby，jellyfin 访问地址，无需手动配置 通过 metadata 服务自动更新 emby 配置和元数据 项目地址：点击打开
+💬 TurboSeek - 类 Perplexity 开源 AI 搜索引擎
+网站功能：AI 搜索引擎">
+ 
+  
+  
+  
+</head>
+<body><nav class="navbar is-light" role="navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" title="home" class="navbar-item">
+                <span class="logo">
+                    <h1>at337am</h1>
+                </span>
+            </a>
+
+            
+            <a id="theme-toggle" class="theme-toggle" href="#">
+                <img src="https://at337am.github.io/svg/sun.svg" alt="sun icon" class="theme-icon" />
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                
+                <a href="/hello" class="navbar-item">前言</a>
+                
+                <a href="/topics" class="navbar-item">书签</a>
+                
+                <a href="/post" class="navbar-item">归档</a>
+                
+            </div>
+
+        </div>
+        <div class="search">
+            <div id="fastSearch">
+                <input id="searchInput" tabindex="0" placeholder="Search...">
+                <ul id="searchResults">
+
+                </ul>
+            </div>
+            <a id="search-btn" style="display: inline-block;" href="# ">
+                <div class="icon-search"><svg class="search-svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+            </a>
+        </div>
+
+        <script src="/js/fuse.min.js"></script> 
+        <script src="/js/fastsearch.js"></script>
+
+    </div>
+</nav>
+
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var burger = document.querySelector('.navbar-burger');
+        burger.addEventListener('click', function() {
+            burger.classList.toggle('is-active');
+            document.querySelector('.navbar-menu').classList.toggle('is-active');
+        });
+    });
+
+    
+    function setTheme(theme) {
+        let body = document.body;
+        let themeIcon = document.querySelector(".theme-icon");
+        if (theme === "dark") {
+            body.classList.add("dark-mode");
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/moon.svg";
+            themeIcon.alt = "moon icon";
+        } else {
+            body.classList.remove("dark-mode");
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/sun.svg";
+            themeIcon.alt = "sun icon";
+        }
+        
+        localStorage.setItem("theme", theme);
+    }
+
+    
+    let theme = localStorage.getItem("theme") || "light";
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (isDarkMode) {
+        
+        setTheme('dark');
+
+    } else {
+        
+        setTheme('light');
+    }
+    setTheme(theme);
+
+    
+    document.getElementById("theme-toggle").addEventListener("click", function() {
+        if (theme === "light") {
+            theme = "dark";
+        } else {
+            theme = "light";
+        }
+        setTheme(theme);
+    });
+
+
+
+</script>
+
+</header><main>
+
+<div class="single-container">
+    <div class="archive">
+        <h1 class="title is-1"> 🐋 冲浪分享 01</h1>
+        <div class="title subtitle heading is-6">
+            <div class="author-info columns is-vcentered">
+                <div class="column">
+                    <div class="columns is-vcentered is-mobile">
+                        
+                        <div class="column is-narrow">
+                            <img src="/images/author.webp" class="author-image">
+                        </div>
+                        
+                        <div class="column">
+                            <p>Ji Eun</p>
+                            <p><time>2024/05/21</time>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-topics-container">
+                    
+                        <a href="/topics/-%E5%86%B2%E6%B5%AA%E5%88%86%E4%BA%AB">🍥 冲浪分享</a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="content article-content">
+            <p><img src="https://yzlin.oss-cn-hangzhou.aliyuncs.com/photo_2024-06-10_20-14-34.jpg?x-oss-process=image/resize,w_3600/format,webp" alt="image"></p>
+<p><a href="https://github.com/monlor/docker-xiaoya">🥳 docker-xiaoya - 一键自动化小雅全家桶部署</a></p>
+<p><strong>项目功能</strong>：媒体库自动化部署</p>
+<p><strong>项目介绍</strong>：一个使用 Docker Compose 以更优雅的方式来部署小雅服务，支持一键部署 Alist + Emby + Jellyfin，全平台支持，Linux/Windows/Mac/群晖，X86/Arm 架构。</p>
+<p>支持部署 Alist+下载元数据+部署 Emby/Jellyfin 服务全流程自动，无需人工干预。</p>
+<p><strong>项目亮点</strong>：</p>
+<ul>
+<li>所有脚本集成到 Docker 镜像，避免污染系统环境</li>
+<li>合并 jellyfin 和 emby 的 x86 和 arm 镜像，部署时无需区分镜像名</li>
+<li>集成云盘清理脚本到 alist 服务，无需单独部署</li>
+<li>通过环境变量配置阿里云盘 token，无需映射文件</li>
+<li>jellyfin 和 emby 启动时自动进行依赖检查，等待元数据下载完成，自动添加 hosts</li>
+<li>完全兼容所有能运行 docker 的 x86 和 arm 设备</li>
+<li>支持自动清理阿里云盘，自动同步小雅元数据</li>
+<li>自动更新内部的 alist，emby，jellyfin 访问地址，无需手动配置</li>
+<li>通过 metadata 服务自动更新 emby 配置和元数据</li>
+</ul>
+<p><strong>项目地址</strong>：<a href="https://github.com/monlor/docker-xiaoya">点击打开</a></p>
+<p><img src="https://yzlin.oss-cn-hangzhou.aliyuncs.com/og-image.png?x-oss-process=image/resize,w_3600/format,webp" alt="image"></p>
+<p><a href="https://github.com/Nutlope/turboseek">💬 TurboSeek - 类 Perplexity 开源 AI 搜索引擎</a></p>
+<p><strong>网站功能</strong>：AI 搜索引擎</p>
+<p><strong>网站介绍</strong>：一个开源 AI 搜索<a href=""></a>引擎，它使用 Together AI 进行 LLM 推理，结合 Mixtral 8x7B 和 Llama-3 模型，利用 Bing 获取搜索结果。</p>
+<p>TurboSeek 处理用户查询，获取并存储上下文，生成响应和相关问题，基于 Next.js 和 Tailwind 构建。</p>
+<p><strong>网站网址</strong>：<a href="https://www.turboseek.io/">点击打开</a></p>
+<p><img src="https://yzlin.oss-cn-hangzhou.aliyuncs.com/recaptcha.gif" alt="gif"></p>
+<p><a href="https://github.com/NopeCHALLC/nopecha-extension">🖥 NopeCHA - AI 自动 CAPTCHA 验证码识别插件</a></p>
+<p><strong>插件功能</strong>：验证码自动识别</p>
+<p><strong>插件平台</strong>：Chrome Edge</p>
+<p><strong>插件介绍</strong>：一个可以自动识别 CAPTCHA 验证码的 AI 工具，支持识别所有版本的 reCAPTCHA、FunCAPTCHA、hCaptcha、WAF 验证码、300+ 文本验证码类型和 Cloudflare 验证等。</p>
+<p>免费用户每 24 小时最多 100 次识别，对于个人应该够用。并且与 Selenium、Puppeteer 和 Playwright 等自动化工具兼容。</p>
+<p><strong>插件安装</strong>：<a href="https://nopecha.com/">点击安装</a></p>
+
+        </div>
+    </div>
+    
+    <a href="#" id="scrollToTopButton">
+        <svg t="1686753152588" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="3988" width="48" height="48">
+            <path
+                d="M518.5 360.3c-3.2-4.4-9.7-4.4-12.9 0l-178 246c-3.8 5.3 0 12.7 6.5 12.7H381c10.2 0 19.9-4.9 25.9-13.2L512 460.4l105.2 145.4c6 8.3 15.6 13.2 25.9 13.2H690c6.5 0 10.3-7.4 6.5-12.7l-178-246z"
+                p-id="3989" fill="#363636"></path>
+            <path
+                d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64z m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                p-id="3990" fill="#363636"></path>
+        </svg>
+    </a>
+
+    <div class="pp-container">
+        <section class="pre-and-post">
+            <div class="has-text-left">
+                
+                <p>prev</p>
+                <a href="https://at337am.github.io/post/guide/g4/" class=" hover-underline-animation">v2rayA for Docker</a>
+                
+            </div>
+            <div class="has-text-right">
+                
+                <p>next</p>
+                <a href="https://at337am.github.io/post/misc/m2/" class=" hover-underline-animation">学了十二年 Office</a>
+                
+            </div>
+        </section>
+    </div>
+
+</div>
+</main><footer class="footer">
+    <div class="content has-text-centered">
+    <span>🎐 嘘，这里有一只酣睡的小猫 <a href="https://at337am.github.io/">ᓚᘏᗢ zZZ</a></span>
+    </div>
+  </footer></body>
+</html>

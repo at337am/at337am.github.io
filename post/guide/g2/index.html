@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  
+  <title>
+    PCDN、WebRTC | at337am
+  </title>
+  <meta
+    name="description"
+    content="解决网页端 B 站偷跑 PCDN PCDN 是一种内容分发网络技术，通过用户之间的 P2P（点对点）连接来共享和分发内容。BiliBili 网页端使用 PCDN 来分担服务器压力和提高内容分发效率。
+PCDN 的潜在坏处：
+占用带宽：PCDN 会利用用户的上传带宽，可能导致其他网络活动变慢。 安全隐患：由于涉及 P2P 连接，可能带来安全和隐私风险。 不稳定的观看体验：PCDN 的性能依赖于其他用户的上传速度，可能导致视频加载速度和质量不稳定。 上述内容由 GPT 回答
+解决办法：使用脚本 - Make BiliBili Great Again
+防止 WebRTC 泄露真实 IP 地址 WebRTC 是一种允许网页浏览器进行实时语音、视频通信和 P2P 文件共享的技术。它通过浏览器内置的 API 实现，不需要额外插件。
+WebRTC 的潜在坏处：
+IP 地址泄露：WebRTC 可以绕过传统的隐私保护措施，直接暴露用户的真实 IP 地址，即使在使用 VPN 时也可能被泄露。 隐私风险：通过获取用户的真实 IP 地址，网站和恶意攻击者可以追踪用户的真实位置，降低隐私保护。 安全漏洞：WebRTC 的实时通信特性可能被利用进行网络攻击，尤其是在配置不当或未加密的情况下。 上述内容由 GPT 回答
+解决办法：使用插件- WebRTC Control
+via V2EX - b 站网页端也会开启 PCDN？"
+  />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="https://at337am.github.io/svg/favicon.svg"
+  />
+  <link rel="canonical" href="https://at337am.github.io/post/guide/g2/" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+  />
+  
+  <link rel="stylesheet" href="https://at337am.github.io/scss/style.min.30aaa64ab6d30093ff4c0b2d790a404f01d470f6f346bde4475b59c564599ba3.css" />
+
+  <meta property="og:url" content="https://at337am.github.io/post/guide/g2/">
+  <meta property="og:site_name" content="at337am">
+  <meta property="og:title" content="PCDN、WebRTC">
+  <meta property="og:description" content="解决网页端 B 站偷跑 PCDN PCDN 是一种内容分发网络技术，通过用户之间的 P2P（点对点）连接来共享和分发内容。BiliBili 网页端使用 PCDN 来分担服务器压力和提高内容分发效率。
+PCDN 的潜在坏处：
+占用带宽：PCDN 会利用用户的上传带宽，可能导致其他网络活动变慢。 安全隐患：由于涉及 P2P 连接，可能带来安全和隐私风险。 不稳定的观看体验：PCDN 的性能依赖于其他用户的上传速度，可能导致视频加载速度和质量不稳定。 上述内容由 GPT 回答
+解决办法：使用脚本 - Make BiliBili Great Again
+防止 WebRTC 泄露真实 IP 地址 WebRTC 是一种允许网页浏览器进行实时语音、视频通信和 P2P 文件共享的技术。它通过浏览器内置的 API 实现，不需要额外插件。
+WebRTC 的潜在坏处：
+IP 地址泄露：WebRTC 可以绕过传统的隐私保护措施，直接暴露用户的真实 IP 地址，即使在使用 VPN 时也可能被泄露。 隐私风险：通过获取用户的真实 IP 地址，网站和恶意攻击者可以追踪用户的真实位置，降低隐私保护。 安全漏洞：WebRTC 的实时通信特性可能被利用进行网络攻击，尤其是在配置不当或未加密的情况下。 上述内容由 GPT 回答
+解决办法：使用插件- WebRTC Control
+via V2EX - b 站网页端也会开启 PCDN？">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-04-16T00:00:01+08:00">
+    <meta property="article:modified_time" content="2024-04-16T00:00:01+08:00">
+ 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="PCDN、WebRTC">
+  <meta name="twitter:description" content="解决网页端 B 站偷跑 PCDN PCDN 是一种内容分发网络技术，通过用户之间的 P2P（点对点）连接来共享和分发内容。BiliBili 网页端使用 PCDN 来分担服务器压力和提高内容分发效率。
+PCDN 的潜在坏处：
+占用带宽：PCDN 会利用用户的上传带宽，可能导致其他网络活动变慢。 安全隐患：由于涉及 P2P 连接，可能带来安全和隐私风险。 不稳定的观看体验：PCDN 的性能依赖于其他用户的上传速度，可能导致视频加载速度和质量不稳定。 上述内容由 GPT 回答
+解决办法：使用脚本 - Make BiliBili Great Again
+防止 WebRTC 泄露真实 IP 地址 WebRTC 是一种允许网页浏览器进行实时语音、视频通信和 P2P 文件共享的技术。它通过浏览器内置的 API 实现，不需要额外插件。
+WebRTC 的潜在坏处：
+IP 地址泄露：WebRTC 可以绕过传统的隐私保护措施，直接暴露用户的真实 IP 地址，即使在使用 VPN 时也可能被泄露。 隐私风险：通过获取用户的真实 IP 地址，网站和恶意攻击者可以追踪用户的真实位置，降低隐私保护。 安全漏洞：WebRTC 的实时通信特性可能被利用进行网络攻击，尤其是在配置不当或未加密的情况下。 上述内容由 GPT 回答
+解决办法：使用插件- WebRTC Control
+via V2EX - b 站网页端也会开启 PCDN？">
+ 
+  
+  
+  
+</head>
+<body><nav class="navbar is-light" role="navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" title="home" class="navbar-item">
+                <span class="logo">
+                    <h1>at337am</h1>
+                </span>
+            </a>
+
+            
+            <a id="theme-toggle" class="theme-toggle" href="#">
+                <img src="https://at337am.github.io/svg/sun.svg" alt="sun icon" class="theme-icon" />
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                
+                <a href="/hello" class="navbar-item">前言</a>
+                
+                <a href="/topics" class="navbar-item">书签</a>
+                
+                <a href="/post" class="navbar-item">归档</a>
+                
+            </div>
+
+        </div>
+        <div class="search">
+            <div id="fastSearch">
+                <input id="searchInput" tabindex="0" placeholder="Search...">
+                <ul id="searchResults">
+
+                </ul>
+            </div>
+            <a id="search-btn" style="display: inline-block;" href="# ">
+                <div class="icon-search"><svg class="search-svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+            </a>
+        </div>
+
+        <script src="/js/fuse.min.js"></script> 
+        <script src="/js/fastsearch.js"></script>
+
+    </div>
+</nav>
+
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var burger = document.querySelector('.navbar-burger');
+        burger.addEventListener('click', function() {
+            burger.classList.toggle('is-active');
+            document.querySelector('.navbar-menu').classList.toggle('is-active');
+        });
+    });
+
+    
+    function setTheme(theme) {
+        let body = document.body;
+        let themeIcon = document.querySelector(".theme-icon");
+        if (theme === "dark") {
+            body.classList.add("dark-mode");
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/moon.svg";
+            themeIcon.alt = "moon icon";
+        } else {
+            body.classList.remove("dark-mode");
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/sun.svg";
+            themeIcon.alt = "sun icon";
+        }
+        
+        localStorage.setItem("theme", theme);
+    }
+
+    
+    let theme = localStorage.getItem("theme") || "light";
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (isDarkMode) {
+        
+        setTheme('dark');
+
+    } else {
+        
+        setTheme('light');
+    }
+    setTheme(theme);
+
+    
+    document.getElementById("theme-toggle").addEventListener("click", function() {
+        if (theme === "light") {
+            theme = "dark";
+        } else {
+            theme = "light";
+        }
+        setTheme(theme);
+    });
+
+
+
+</script>
+
+</header><main>
+
+<div class="single-container">
+    <div class="archive">
+        <h1 class="title is-1">PCDN、WebRTC</h1>
+        <div class="title subtitle heading is-6">
+            <div class="author-info columns is-vcentered">
+                <div class="column">
+                    <div class="columns is-vcentered is-mobile">
+                        
+                        <div class="column is-narrow">
+                            <img src="/images/author.webp" class="author-image">
+                        </div>
+                        
+                        <div class="column">
+                            <p>Ji Eun</p>
+                            <p><time>2024/04/16</time>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-topics-container">
+                    
+                        <a href="/topics/-%E9%A3%9F%E7%94%A8%E7%AC%94%E8%AE%B0">📔 食用笔记</a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="content article-content">
+            <h4 id="解决网页端-b-站偷跑-pcdn">解决网页端 B 站偷跑 PCDN</h4>
+<p>PCDN 是一种内容分发网络技术，通过用户之间的 P2P（点对点）连接来共享和分发内容。BiliBili 网页端使用 PCDN 来分担服务器压力和提高内容分发效率。</p>
+<p><strong>PCDN 的潜在坏处：</strong></p>
+<ol>
+<li><strong>占用带宽</strong>：PCDN 会利用用户的上传带宽，可能导致其他网络活动变慢。</li>
+<li><strong>安全隐患</strong>：由于涉及 P2P 连接，可能带来安全和隐私风险。</li>
+<li><strong>不稳定的观看体验</strong>：PCDN 的性能依赖于其他用户的上传速度，可能导致视频加载速度和质量不稳定。</li>
+</ol>
+<p><del>上述内容由 GPT 回答</del></p>
+<p><strong>解决办法</strong>：使用脚本 - <a href="https://greasyfork.org/zh-CN/scripts/415714-make-bilibili-great-again">Make BiliBili Great Again</a></p>
+<h4 id="防止-webrtc-泄露真实-ip-地址">防止 WebRTC 泄露真实 IP 地址</h4>
+<p>WebRTC 是一种允许网页浏览器进行实时语音、视频通信和 P2P 文件共享的技术。它通过浏览器内置的 API 实现，不需要额外插件。</p>
+<p><strong>WebRTC 的潜在坏处：</strong></p>
+<ol>
+<li><strong>IP 地址泄露</strong>：WebRTC 可以绕过传统的隐私保护措施，直接暴露用户的真实 IP 地址，即使在使用 VPN 时也可能被泄露。</li>
+<li><strong>隐私风险</strong>：通过获取用户的真实 IP 地址，网站和恶意攻击者可以追踪用户的真实位置，降低隐私保护。</li>
+<li><strong>安全漏洞</strong>：WebRTC 的实时通信特性可能被利用进行网络攻击，尤其是在配置不当或未加密的情况下。</li>
+</ol>
+<p><del>上述内容由 GPT 回答</del></p>
+<p><strong>解决办法</strong>：使用插件- <a href="https://chromewebstore.google.com/detail/fjkmabmdepjfammlpliljpnbhleegehm">WebRTC Control</a></p>
+<p>via <a href="https://cn.v2ex.com/t/1028610">V2EX - b 站网页端也会开启 PCDN？</a></p>
+
+        </div>
+    </div>
+    
+    <a href="#" id="scrollToTopButton">
+        <svg t="1686753152588" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            p-id="3988" width="48" height="48">
+            <path
+                d="M518.5 360.3c-3.2-4.4-9.7-4.4-12.9 0l-178 246c-3.8 5.3 0 12.7 6.5 12.7H381c10.2 0 19.9-4.9 25.9-13.2L512 460.4l105.2 145.4c6 8.3 15.6 13.2 25.9 13.2H690c6.5 0 10.3-7.4 6.5-12.7l-178-246z"
+                p-id="3989" fill="#363636"></path>
+            <path
+                d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64z m0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"
+                p-id="3990" fill="#363636"></path>
+        </svg>
+    </a>
+
+    <div class="pp-container">
+        <section class="pre-and-post">
+            <div class="has-text-left">
+                
+                <p>prev</p>
+                <a href="https://at337am.github.io/post/misc/m1/" class=" hover-underline-animation">依附的自由</a>
+                
+            </div>
+            <div class="has-text-right">
+                
+                <p>next</p>
+                <a href="https://at337am.github.io/post/guide/g3/" class=" hover-underline-animation">RustDesk 自建服</a>
+                
+            </div>
+        </section>
+    </div>
+
+</div>
+</main><footer class="footer">
+    <div class="content has-text-centered">
+    <span>🎐 嘘，这里有一只酣睡的小猫 <a href="https://at337am.github.io/">ᓚᘏᗢ zZZ</a></span>
+    </div>
+  </footer></body>
+</html>

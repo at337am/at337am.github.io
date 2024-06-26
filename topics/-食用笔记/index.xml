@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>📔 食用笔记 on at337am</title>
+    <link>https://at337am.github.io/topics/-%E9%A3%9F%E7%94%A8%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 📔 食用笔记 on at337am</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 10 May 2024 00:00:01 +0800</lastBuildDate>
+    <atom:link href="https://at337am.github.io/topics/-%E9%A3%9F%E7%94%A8%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>v2rayA for Docker</title>
+      <link>https://at337am.github.io/post/guide/g4/</link>
+      <pubDate>Fri, 10 May 2024 00:00:01 +0800</pubDate>
+      <guid>https://at337am.github.io/post/guide/g4/</guid>
+      <description>水字数 v2rayA 是一个支持全局透明代理的 V2Ray 客户端，同时兼容 SS、SSR、Trojan(trojan-go)、Tuic 与 Juicity 协议。&#xA;v2rayA 致力于提供最简单的操作，满足绝大部分需求。&#xA;得益于 Web 客户端的优势，你不仅可以将其用于本地计算机，还可以轻松地将它部署在路由器或 NAS 上。&#xA;项目地址：GitHub&#xA;官方文档：v2rayA&#xA;docker-compose.yml services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: true network_mode: host container_name: v2raya environment: - V2RAYA_LOG_FILE=/tmp/v2raya.log - V2RAYA_V2RAY_BIN=/usr/local/bin/xray - V2RAYA_NFTABLES_SUPPORT=off - IPTABLES_MODE=legacy volumes: - /lib/modules:/lib/modules:ro - /etc/resolv.conf:/etc/resolv.conf - /etc/v2raya:/etc/v2raya 服务启动后，访问 http://localhost:2017 进入管理面板。</description>
+    </item>
+    <item>
+      <title>RustDesk 自建服</title>
+      <link>https://at337am.github.io/post/guide/g3/</link>
+      <pubDate>Sat, 27 Apr 2024 00:00:01 +0800</pubDate>
+      <guid>https://at337am.github.io/post/guide/g3/</guid>
+      <description>水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。&#xA;适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki&#xA;docker-compose.yml networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP</description>
+    </item>
+    <item>
+      <title>PCDN、WebRTC</title>
+      <link>https://at337am.github.io/post/guide/g2/</link>
+      <pubDate>Tue, 16 Apr 2024 00:00:01 +0800</pubDate>
+      <guid>https://at337am.github.io/post/guide/g2/</guid>
+      <description>解决网页端 B 站偷跑 PCDN PCDN 是一种内容分发网络技术，通过用户之间的 P2P（点对点）连接来共享和分发内容。BiliBili 网页端使用 PCDN 来分担服务器压力和提高内容分发效率。&#xA;PCDN 的潜在坏处：&#xA;占用带宽：PCDN 会利用用户的上传带宽，可能导致其他网络活动变慢。 安全隐患：由于涉及 P2P 连接，可能带来安全和隐私风险。 不稳定的观看体验：PCDN 的性能依赖于其他用户的上传速度，可能导致视频加载速度和质量不稳定。 上述内容由 GPT 回答&#xA;解决办法：使用脚本 - Make BiliBili Great Again&#xA;防止 WebRTC 泄露真实 IP 地址 WebRTC 是一种允许网页浏览器进行实时语音、视频通信和 P2P 文件共享的技术。它通过浏览器内置的 API 实现，不需要额外插件。&#xA;WebRTC 的潜在坏处：&#xA;IP 地址泄露：WebRTC 可以绕过传统的隐私保护措施，直接暴露用户的真实 IP 地址，即使在使用 VPN 时也可能被泄露。 隐私风险：通过获取用户的真实 IP 地址，网站和恶意攻击者可以追踪用户的真实位置，降低隐私保护。 安全漏洞：WebRTC 的实时通信特性可能被利用进行网络攻击，尤其是在配置不当或未加密的情况下。 上述内容由 GPT 回答&#xA;解决办法：使用插件- WebRTC Control&#xA;via V2EX - b 站网页端也会开启 PCDN？</description>
+    </item>
+    <item>
+      <title>QUIC、Shadowsocks</title>
+      <link>https://at337am.github.io/post/guide/g1/</link>
+      <pubDate>Wed, 25 Oct 2023 03:37:00 +0800</pubDate>
+      <guid>https://at337am.github.io/post/guide/g1/</guid>
+      <description>限制 QUIC QUIC 是 Google 设计的传输层网络协议，基于 UDP，目的是解决 TCP 性能较低的问题。&#xA;2017 年，Google 开始在 YouTube 上少量测试 QUIC（HTTP/3）传输视频流，而在当时只要解决 DNS 污染问题，就可以直连 YouTube 服务器观看视频。&#xA;不过很快 QUIC 就被 GFW 限制或封锁了，无法再直连观看 YouTube。以至于需要关闭浏览器的 QUIC 功能，避免被运营商针对 UDP 干扰影响。（一种 QoS）&#xA;因为这种 QoS 被认为是 GFW 干扰 UDP/QUIC 的手段，并且早期的 Proxy 工具，比如 Shadowsocks 不会让 UDP Over TCP，所以出现 QUIC 连接时，SS 客户端会以 UDP 与服务端通讯，结果 UDP 连接可能会因为 QoS 而非常不稳定，或是直接中断。&#xA;摘自：ggame&#xA;关闭 Chrome 浏览器 QUIC 协议 关闭方法：在 Chrome 地址栏输入 chrome://flags，搜索 quic，将 &amp;ldquo;Experimental QUIC protocol&amp;rdquo; 设为 Disabled，然后重新启动浏览器。&#xA;via V2EX - 关闭 Chrome 浏览器 QUIC 协议，让 YouTube 视频更流畅？</description>
+    </item>
+  </channel>
+</rss>

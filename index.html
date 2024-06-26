@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+	<meta name="generator" content="Hugo 0.126.2">
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  
+  <title>
+    at337am
+  </title>
+  <meta
+    name="description"
+    content="thank u ~"
+  />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="https://at337am.github.io/svg/favicon.svg"
+  />
+  <link rel="canonical" href="https://at337am.github.io/" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+  />
+  
+  <link rel="stylesheet" href="https://at337am.github.io/scss/style.min.30aaa64ab6d30093ff4c0b2d790a404f01d470f6f346bde4475b59c564599ba3.css" />
+
+  <meta property="og:url" content="https://at337am.github.io/">
+  <meta property="og:site_name" content="at337am">
+  <meta property="og:title" content="at337am">
+  <meta property="og:description" content="thank u ~">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="website">
+ 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="at337am">
+  <meta name="twitter:description" content="thank u ~">
+ 
+  
+  
+  
+</head>
+<body><nav class="navbar is-light" role="navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" title="home" class="navbar-item">
+                <span class="logo">
+                    <h1>at337am</h1>
+                </span>
+            </a>
+
+            
+            <a id="theme-toggle" class="theme-toggle" href="#">
+                <img src="https://at337am.github.io/svg/sun.svg" alt="sun icon" class="theme-icon" />
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                
+                <a href="/hello" class="navbar-item">前言</a>
+                
+                <a href="/topics" class="navbar-item">书签</a>
+                
+                <a href="/post" class="navbar-item">归档</a>
+                
+            </div>
+
+        </div>
+        <div class="search">
+            <div id="fastSearch">
+                <input id="searchInput" tabindex="0" placeholder="Search...">
+                <ul id="searchResults">
+
+                </ul>
+            </div>
+            <a id="search-btn" style="display: inline-block;" href="# ">
+                <div class="icon-search"><svg class="search-svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+            </a>
+        </div>
+
+        <script src="/js/fuse.min.js"></script> 
+        <script src="/js/fastsearch.js"></script>
+
+    </div>
+</nav>
+
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var burger = document.querySelector('.navbar-burger');
+        burger.addEventListener('click', function() {
+            burger.classList.toggle('is-active');
+            document.querySelector('.navbar-menu').classList.toggle('is-active');
+        });
+    });
+
+    
+    function setTheme(theme) {
+        let body = document.body;
+        let themeIcon = document.querySelector(".theme-icon");
+        if (theme === "dark") {
+            body.classList.add("dark-mode");
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/moon.svg";
+            themeIcon.alt = "moon icon";
+        } else {
+            body.classList.remove("dark-mode");
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/sun.svg";
+            themeIcon.alt = "sun icon";
+        }
+        
+        localStorage.setItem("theme", theme);
+    }
+
+    
+    let theme = localStorage.getItem("theme") || "light";
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (isDarkMode) {
+        
+        setTheme('dark');
+
+    } else {
+        
+        setTheme('light');
+    }
+    setTheme(theme);
+
+    
+    document.getElementById("theme-toggle").addEventListener("click", function() {
+        if (theme === "light") {
+            theme = "dark";
+        } else {
+            theme = "light";
+        }
+        setTheme(theme);
+    });
+
+
+
+</script>
+
+</header><main>
+<article>
+  <div class="is-centered">
+    <div class="title subtitle heading is-6">
+      <div id="home-box">
+        
+        <div class="avatar-container">
+          <img src="/images/author.webp" class="author-avatar" />
+        </div>
+        
+
+        <h1 id="home-title" class="title is-1">Ji Eun</h1>
+        <div class="description column content typewriter-effect">
+          <div class="text" id="typewriter-text">Thx For Finding This Corner</div>
+        </div>
+        <script>
+          const typeWriter = document.getElementById("typewriter-text");
+          typeWriter.style.setProperty(
+            "--characters",
+            typeWriter.innerHTML.length
+          );
+        </script>
+
+        
+        <div class="social-icon">
+          
+          <a href="https://github.com/at337am/at337am.github.io" title="github" target="_blank"
+            ><span class="change-color icon">
+              <svg
+  height="32px"
+  width="32px"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path
+    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+  ></path>
+</svg>
+            </span></a
+          >
+          
+          <a href="https://t.me/at337am" title="telegram" target="_blank"
+            ><span class="change-color icon">
+              <svg
+  height="32px"
+  width="32px"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path
+    d="M21.198 2.433a2.242 2.242 0 0 0-1.022.215l-8.609 3.33c-2.068.8-4.133 1.598-5.724 2.21a405.15 405.15 0 0 1-2.849 1.09c-.42.147-.99.332-1.473.901-.728.968.193 1.798.919 2.286 1.61.516 3.275 1.009 4.654 1.472.509 1.793.997 3.592 1.48 5.388.16.36.506.494.864.498l-.002.018s.281.028.555-.038a2.1 2.1 0 0 0 .933-.517c.345-.324 1.28-1.244 1.811-1.764l3.999 2.952.032.018s.442.311 1.09.355c.324.022.75-.04 1.116-.308.37-.27.613-.702.728-1.196.342-1.492 2.61-12.285 2.997-14.072l-.01.042c.27-1.006.17-1.928-.455-2.474a1.654 1.654 0 0 0-1.034-.407z"
+  />
+</svg>
+            </span></a
+          >
+          
+          <a href="https://x.com/whyyoutouzhele" title="twitter" target="_blank"
+            ><span class="change-color icon">
+              <svg
+  height="32px"
+  width="32px"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path
+    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+  ></path>
+</svg>
+            </span></a
+          >
+          
+          <a href="https://www.instagram.com/dlwlrma" title="instagram" target="_blank"
+            ><span class="change-color icon">
+              <svg
+  height="32px"
+  width="32px"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"></line>
+</svg>
+            </span></a
+          >
+          
+          <a href="https://www.youtube.com/@dlwlrma" title="youtube" target="_blank"
+            ><span class="change-color icon">
+              <svg
+  height="32px"
+  width="32px"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path
+    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+  ></path>
+  <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+</svg>
+            </span></a
+          >
+          
+        </div>
+      </div>
+    </div>
+  </div></article>
+<div class="summary">  <article class="post">
+  
+  <div class="single-container column is-centered">
+    <a href="/post/misc/m3/">
+      <div class="archive" id="post-container">
+        <header class="post-header">
+          <h4 class="post-title">各种...记忆方法</h4>
+        </header>
+        <div class="post-content">
+          <div class="excerpt post-summary">现代人有点太喜欢往自己脑子里放奇怪的东西了。 从小开始，书里就有一些奇怪的记忆法，什么生肖儿歌，取首字母组合之类的。 面对成年人也有离谱小故事记单词，音乐学习法，记忆宫殿这种成年人的玩法。
+效果确实很好，不过我宁愿自己脑子空空的，也不想往自己记忆里放这种奇怪的东西。 完全不想要 从某个单词就立马想到各种乱交、杀人小故事或者脑子里响起奇怪的音乐。</div>
+          <div class="post-time-container">
+            <span class="post-time">
+              2024/06/20 | 💭 随便写写
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</article>
+  <article class="post">
+  
+  <div class="single-container column is-centered">
+    <a href="/post/surf/s2/">
+      <div class="archive" id="post-container">
+        <header class="post-header">
+          <h4 class="post-title">🐋 冲浪分享 02</h4>
+        </header>
+        <div class="post-content">
+          <div class="excerpt post-summary">lingobell
+立志做最可爱的学习网站
+并且在这里你能学到最地道的英语，需要注册登录
+地址：lingobell
+计数挑战
+挑战你的记忆极限，一个很简单的计数小游戏，挺好玩的。
+地址：计数挑战
+一个朋友
+一个免费 VPN 推荐网站。涵盖免费机场、加速器等。可以在这里找到价格折扣、促销活动以及免费试用的机会。
+地址：一个朋友
+Logo Galleria
+基于 AI 的 LOGO 生成工具，可设置主要图案和文字，并可添加负面提示，生成速度较慢，效果蛮不错的，免费下载，无需注册。
+地址：Logo Galleria</div>
+          <div class="post-time-container">
+            <span class="post-time">
+              2024/06/13 | 🍥 冲浪分享
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</article>
+  <article class="post">
+  
+  <div class="single-container column is-centered">
+    <a href="/post/misc/m2/">
+      <div class="archive" id="post-container">
+        <header class="post-header">
+          <h4 class="post-title">学了十二年 Office</h4>
+        </header>
+        <div class="post-content">
+          <div class="excerpt post-summary">小学的电脑课：学生乱玩，老师乱讲
+初中的电脑课：学生乱玩，老师讲 Office 三件套
+高中的电脑课：学生乱玩，老师讲 Office 三件套
+大学的学生：C 盘满了怎么办？压缩包怎么解压不了？电脑怎么重装？
+还需要大学专门开一门计算机基础课来填补空白，但是还是 Office 三件套
+就……Word、Excel、PPT 贯穿了整个 12 年义务教育和大学计算机基础课，也不去教一些 Windows 基础操作、常见文件格式及其打开方式、常见计算机问题处理办法、重装系统等一系列应该在十二年义务教育中被教会的内容。
+应试教育虽然不好，但要是作用在计算机基础操作和排障上也不至于导致现在大学生的基础知识这么匮乏。
+软件使用方法没有那么重要，只要学会了基础的互联网检索，软件怎么用自然有视频教程和文字教程，计算机基础才是最致命的问题。</div>
+          <div class="post-time-container">
+            <span class="post-time">
+              2024/06/06 | 💭 随便写写
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</article>
+  <article class="post">
+  
+  <div class="single-container column is-centered">
+    <a href="/post/surf/s1/">
+      <div class="archive" id="post-container">
+        <header class="post-header">
+          <h4 class="post-title"> 🐋 冲浪分享 01</h4>
+        </header>
+        <div class="post-content">
+          <div class="excerpt post-summary">🥳 docker-xiaoya - 一键自动化小雅全家桶部署
+项目功能：媒体库自动化部署
+项目介绍：一个使用 Docker Compose 以更优雅的方式来部署小雅服务，支持一键部署 Alist + Emby + Jellyfin，全平台支持，Linux/Windows/Mac/群晖，X86/Arm 架构。
+支持部署 Alist+下载元数据+部署 Emby/Jellyfin 服务全流程自动，无需人工干预。
+项目亮点：
+所有脚本集成到 Docker 镜像，避免污染系统环境 合并 jellyfin 和 emby 的 x86 和 arm 镜像，部署时无需区分镜像名 集成云盘清理脚本到 alist 服务，无需单独部署 通过环境变量配置阿里云盘 token，无需映射文件 jellyfin 和 emby 启动时自动进行依赖检查，等待元数据下载完成，自动添加 hosts 完全兼容所有能运行 docker 的 x86 和 arm 设备 支持自动清理阿里云盘，自动同步小雅元数据 自动更新内部的 alist，emby，jellyfin 访问地址，无需手动配置 通过 metadata 服务自动更新 emby 配置和元数据 项目地址：点击打开
+💬 TurboSeek - 类 Perplexity 开源 AI 搜索引擎
+网站功能：AI 搜索引擎</div>
+          <div class="post-time-container">
+            <span class="post-time">
+              2024/05/21 | 🍥 冲浪分享
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</article>
+  <article class="post">
+  
+  <div class="single-container column is-centered">
+    <a href="/post/guide/g4/">
+      <div class="archive" id="post-container">
+        <header class="post-header">
+          <h4 class="post-title">v2rayA for Docker</h4>
+        </header>
+        <div class="post-content">
+          <div class="excerpt post-summary">水字数 v2rayA 是一个支持全局透明代理的 V2Ray 客户端，同时兼容 SS、SSR、Trojan(trojan-go)、Tuic 与 Juicity 协议。
+v2rayA 致力于提供最简单的操作，满足绝大部分需求。
+得益于 Web 客户端的优势，你不仅可以将其用于本地计算机，还可以轻松地将它部署在路由器或 NAS 上。
+项目地址：GitHub
+官方文档：v2rayA
+docker-compose.yml services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: true network_mode: host container_name: v2raya environment: - V2RAYA_LOG_FILE=/tmp/v2raya.log - V2RAYA_V2RAY_BIN=/usr/local/bin/xray - V2RAYA_NFTABLES_SUPPORT=off - IPTABLES_MODE=legacy volumes: - /lib/modules:/lib/modules:ro - /etc/resolv.conf:/etc/resolv.conf - /etc/v2raya:/etc/v2raya 服务启动后，访问 http://localhost:2017 进入管理面板。</div>
+          <div class="post-time-container">
+            <span class="post-time">
+              2024/05/10 | 📔 食用笔记
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</article>
+  <article class="post">
+  
+  <div class="single-container column is-centered">
+    <a href="/post/guide/g3/">
+      <div class="archive" id="post-container">
+        <header class="post-header">
+          <h4 class="post-title">RustDesk 自建服</h4>
+        </header>
+        <div class="post-content">
+          <div class="excerpt post-summary">水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。
+适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki
+docker-compose.yml networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP</div>
+          <div class="post-time-container">
+            <span class="post-time">
+              2024/04/27 | 📔 食用笔记
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</article>
+  <article class="post">
+  
+  <div class="single-container column is-centered">
+    <a href="/post/guide/g2/">
+      <div class="archive" id="post-container">
+        <header class="post-header">
+          <h4 class="post-title">PCDN、WebRTC</h4>
+        </header>
+        <div class="post-content">
+          <div class="excerpt post-summary">解决网页端 B 站偷跑 PCDN PCDN 是一种内容分发网络技术，通过用户之间的 P2P（点对点）连接来共享和分发内容。BiliBili 网页端使用 PCDN 来分担服务器压力和提高内容分发效率。
+PCDN 的潜在坏处：
+占用带宽：PCDN 会利用用户的上传带宽，可能导致其他网络活动变慢。 安全隐患：由于涉及 P2P 连接，可能带来安全和隐私风险。 不稳定的观看体验：PCDN 的性能依赖于其他用户的上传速度，可能导致视频加载速度和质量不稳定。 上述内容由 GPT 回答
+解决办法：使用脚本 - Make BiliBili Great Again
+防止 WebRTC 泄露真实 IP 地址 WebRTC 是一种允许网页浏览器进行实时语音、视频通信和 P2P 文件共享的技术。它通过浏览器内置的 API 实现，不需要额外插件。
+WebRTC 的潜在坏处：
+IP 地址泄露：WebRTC 可以绕过传统的隐私保护措施，直接暴露用户的真实 IP 地址，即使在使用 VPN 时也可能被泄露。 隐私风险：通过获取用户的真实 IP 地址，网站和恶意攻击者可以追踪用户的真实位置，降低隐私保护。 安全漏洞：WebRTC 的实时通信特性可能被利用进行网络攻击，尤其是在配置不当或未加密的情况下。 上述内容由 GPT 回答
+解决办法：使用插件- WebRTC Control
+via V2EX - b 站网页端也会开启 PCDN？</div>
+          <div class="post-time-container">
+            <span class="post-time">
+              2024/04/16 | 📔 食用笔记
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</article>
+  <article class="post">
+  
+  <div class="single-container column is-centered">
+    <a href="/post/misc/m1/">
+      <div class="archive" id="post-container">
+        <header class="post-header">
+          <h4 class="post-title">依附的自由</h4>
+        </header>
+        <div class="post-content">
+          <div class="excerpt post-summary">依附的自由（Collateral freedom）这种说法最早源自 OpenITP 团队编写的报告 Collateral freedom - A Snapshot of Chinese Internet Users Circumventing Censorship。
+该报告研究了当时大陆的网络用户翻墙状况，当时 2013 年最流行的工具是 GoAgent，GoAgent 是使用 Python 和 Google Appengine SDK 编写的代理软件，特点是利用了 Google 的服务器、域名和 IP，而 GFW 当时没有足够能力，在不影响正常使用 Google 云服务器的网站的情况下，封禁 GoAgent。
+这就算是依附的自由，这样的状况直到 Google 绝大多数服务被封锁的那一天。
+最初的 GFW 没有打击各种 Proxy（代理）工具并没有用尽全力，可能是考虑到使用 Proxy 的用户，需要从事外贸等。这算是依附的自由。
+之后常见的 Socks、PPTP、L2TP 等烂大街协议，开始被限制，不过 Cisco AnyConnect 被刻意忽略了较长时间。可能是因为 Cisco AnyConnect 用户的价值更高，所以这段时间，第三方开发者编写的兼容端 OpenConnect 能够获得不错的效果。这也算是依附的自由。
+（从特殊时间〔比如开会〕，大多数工具难以连接来看，GFW 有能力禁止大多工具，只是考虑到影响，没有这么做）
+SNI 是 Server Name Indication（服务器名称指示）的缩写，SNI 会找 TLS 握手时明文传输，目的是让共用 IP 地址和 TCP 端口号的网站能被区别，但也因为 SNI 会明文传输，所以会因为深度包检测而被发现、封禁。</div>
+          <div class="post-time-container">
+            <span class="post-time">
+              2024/02/03 | 💭 随便写写
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</article>
+  <article class="post">
+  
+  <div class="single-container column is-centered">
+    <a href="/post/guide/g1/">
+      <div class="archive" id="post-container">
+        <header class="post-header">
+          <h4 class="post-title">QUIC、Shadowsocks</h4>
+        </header>
+        <div class="post-content">
+          <div class="excerpt post-summary">限制 QUIC QUIC 是 Google 设计的传输层网络协议，基于 UDP，目的是解决 TCP 性能较低的问题。
+2017 年，Google 开始在 YouTube 上少量测试 QUIC（HTTP/3）传输视频流，而在当时只要解决 DNS 污染问题，就可以直连 YouTube 服务器观看视频。
+不过很快 QUIC 就被 GFW 限制或封锁了，无法再直连观看 YouTube。以至于需要关闭浏览器的 QUIC 功能，避免被运营商针对 UDP 干扰影响。（一种 QoS）
+因为这种 QoS 被认为是 GFW 干扰 UDP/QUIC 的手段，并且早期的 Proxy 工具，比如 Shadowsocks 不会让 UDP Over TCP，所以出现 QUIC 连接时，SS 客户端会以 UDP 与服务端通讯，结果 UDP 连接可能会因为 QoS 而非常不稳定，或是直接中断。
+摘自：ggame
+关闭 Chrome 浏览器 QUIC 协议 关闭方法：在 Chrome 地址栏输入 chrome://flags，搜索 quic，将 &ldquo;Experimental QUIC protocol&rdquo; 设为 Disabled，然后重新启动浏览器。
+via V2EX - 关闭 Chrome 浏览器 QUIC 协议，让 YouTube 视频更流畅？</div>
+          <div class="post-time-container">
+            <span class="post-time">
+              2023/10/25 | 📔 食用笔记
+            </span>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</article>
+  <section class="pagination">
+  
+  <label>
+    <span class="pag-link">
+      1 of 1
+    </span>
+  </label>
+  
+</section>
+
+</div>
+</main><footer class="footer">
+    <div class="content has-text-centered">
+    <span>🎐 嘘，这里有一只酣睡的小猫 <a href="https://at337am.github.io/">ᓚᘏᗢ zZZ</a></span>
+    </div>
+  </footer></body>
+</html>

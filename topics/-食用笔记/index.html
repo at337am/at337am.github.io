@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, viewport-fit=cover"
+  />
+  
+  <title>
+    📔 食用笔记 | at337am
+  </title>
+  <meta
+    name="description"
+    content="thank u ~"
+  />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="https://at337am.github.io/svg/favicon.svg"
+  />
+  <link rel="canonical" href="https://at337am.github.io/topics/-%E9%A3%9F%E7%94%A8%E7%AC%94%E8%AE%B0/" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
+  />
+  
+  <link rel="stylesheet" href="https://at337am.github.io/scss/style.min.30aaa64ab6d30093ff4c0b2d790a404f01d470f6f346bde4475b59c564599ba3.css" />
+
+  <meta property="og:url" content="https://at337am.github.io/topics/-%E9%A3%9F%E7%94%A8%E7%AC%94%E8%AE%B0/">
+  <meta property="og:site_name" content="at337am">
+  <meta property="og:title" content="📔 食用笔记">
+  <meta property="og:description" content="thank u ~">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="website">
+ 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="📔 食用笔记">
+  <meta name="twitter:description" content="thank u ~">
+ 
+  
+  
+  
+</head>
+<body><nav class="navbar is-light" role="navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" title="home" class="navbar-item">
+                <span class="logo">
+                    <h1>at337am</h1>
+                </span>
+            </a>
+
+            
+            <a id="theme-toggle" class="theme-toggle" href="#">
+                <img src="https://at337am.github.io/svg/sun.svg" alt="sun icon" class="theme-icon" />
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                
+                <a href="/hello" class="navbar-item">前言</a>
+                
+                <a href="/topics" class="navbar-item">书签</a>
+                
+                <a href="/post" class="navbar-item">归档</a>
+                
+            </div>
+
+        </div>
+        <div class="search">
+            <div id="fastSearch">
+                <input id="searchInput" tabindex="0" placeholder="Search...">
+                <ul id="searchResults">
+
+                </ul>
+            </div>
+            <a id="search-btn" style="display: inline-block;" href="# ">
+                <div class="icon-search"><svg class="search-svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+            </a>
+        </div>
+
+        <script src="/js/fuse.min.js"></script> 
+        <script src="/js/fastsearch.js"></script>
+
+    </div>
+</nav>
+
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var burger = document.querySelector('.navbar-burger');
+        burger.addEventListener('click', function() {
+            burger.classList.toggle('is-active');
+            document.querySelector('.navbar-menu').classList.toggle('is-active');
+        });
+    });
+
+    
+    function setTheme(theme) {
+        let body = document.body;
+        let themeIcon = document.querySelector(".theme-icon");
+        if (theme === "dark") {
+            body.classList.add("dark-mode");
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/moon.svg";
+            themeIcon.alt = "moon icon";
+        } else {
+            body.classList.remove("dark-mode");
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/sun.svg";
+            themeIcon.alt = "sun icon";
+        }
+        
+        localStorage.setItem("theme", theme);
+    }
+
+    
+    let theme = localStorage.getItem("theme") || "light";
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (isDarkMode) {
+        
+        setTheme('dark');
+
+    } else {
+        
+        setTheme('light');
+    }
+    setTheme(theme);
+
+    
+    document.getElementById("theme-toggle").addEventListener("click", function() {
+        if (theme === "light") {
+            theme = "dark";
+        } else {
+            theme = "light";
+        }
+        setTheme(theme);
+    });
+
+
+
+</script>
+
+</header><main>
+<div class="container">
+  <div class="section">
+    <div class="content">
+      <h1 class="title is-1">📔 食用笔记</h1>
+    </div>
+  </div>
+</div>
+
+<div class="each-topic column is-centered">
+  <div class="archive">
+    
+    <h2 class="archive-title">2024</h2>
+    
+    <article class="archive-item">
+      <a
+        href="https://at337am.github.io/post/guide/g4/"
+        class="archive-item-link hover-underline-animation"
+        >v2rayA for Docker</a
+      >
+      <span class="archive-item-date"> 05/10 </span>
+    </article>
+    
+    <article class="archive-item">
+      <a
+        href="https://at337am.github.io/post/guide/g3/"
+        class="archive-item-link hover-underline-animation"
+        >RustDesk 自建服</a
+      >
+      <span class="archive-item-date"> 04/27 </span>
+    </article>
+    
+    <article class="archive-item">
+      <a
+        href="https://at337am.github.io/post/guide/g2/"
+        class="archive-item-link hover-underline-animation"
+        >PCDN、WebRTC</a
+      >
+      <span class="archive-item-date"> 04/16 </span>
+    </article>
+     
+    <h2 class="archive-title">2023</h2>
+    
+    <article class="archive-item">
+      <a
+        href="https://at337am.github.io/post/guide/g1/"
+        class="archive-item-link hover-underline-animation"
+        >QUIC、Shadowsocks</a
+      >
+      <span class="archive-item-date"> 10/25 </span>
+    </article>
+     
+  </div>
+</div>
+</main><footer class="footer">
+    <div class="content has-text-centered">
+    <span>🎐 嘘，这里有一只酣睡的小猫 <a href="https://at337am.github.io/">ᓚᘏᗢ zZZ</a></span>
+    </div>
+  </footer></body>
+</html>

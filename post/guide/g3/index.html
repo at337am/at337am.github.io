@@ -13,27 +13,29 @@
     name="description"
     content="水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。
 适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki
-docker-compose.yml networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP"
+docker-compose.yml
+networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP"
   />
   <link
     rel="icon"
     type="image/svg+xml"
-    href="https://ewjx.fun/svg/favicon.svg"
+    href="https://at337am.github.io/svg/favicon.svg"
   />
-  <link rel="canonical" href="https://ewjx.fun/post/guide/g3/" />
+  <link rel="canonical" href="https://at337am.github.io/post/guide/g3/" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
   />
   
-  <link rel="stylesheet" href="https://ewjx.fun/scss/style.min.5f4fb9a17c879cecbe57ce7c3a1bf96fdf1184aee1ecaef5f5192d45e73b25eb.css" />
+  <link rel="stylesheet" href="https://at337am.github.io/scss/style.min.bd6933450eebd3517bc183dfdf0b597ae6e44e8b4773da9c6556062d36e70902.css" />
 
-  <meta property="og:url" content="https://ewjx.fun/post/guide/g3/">
+  <meta property="og:url" content="https://at337am.github.io/post/guide/g3/">
   <meta property="og:site_name" content="at337am">
   <meta property="og:title" content="RustDesk 自建服">
   <meta property="og:description" content="水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。
 适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki
-docker-compose.yml networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP">
+docker-compose.yml
+networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -44,7 +46,8 @@ docker-compose.yml networks: rustdesk-net: external: false services: hbbs: conta
   <meta name="twitter:title" content="RustDesk 自建服">
   <meta name="twitter:description" content="水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。
 适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki
-docker-compose.yml networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP">
+docker-compose.yml
+networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP">
  
   
   
@@ -61,7 +64,7 @@ docker-compose.yml networks: rustdesk-net: external: false services: hbbs: conta
 
             
             <a id="theme-toggle" class="theme-toggle" href="#">
-                <img src="https://ewjx.fun/svg/sun.svg" alt="sun icon" class="theme-icon" />
+                <img src="https://at337am.github.io/svg/sun.svg" alt="sun icon" class="theme-icon" />
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -117,11 +120,11 @@ docker-compose.yml networks: rustdesk-net: external: false services: hbbs: conta
         let themeIcon = document.querySelector(".theme-icon");
         if (theme === "dark") {
             body.classList.add("dark-mode");
-            themeIcon.src = "https:\/\/ewjx.fun\/svg/moon.svg";
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/moon.svg";
             themeIcon.alt = "moon icon";
         } else {
             body.classList.remove("dark-mode");
-            themeIcon.src = "https:\/\/ewjx.fun\/svg/sun.svg";
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/sun.svg";
             themeIcon.alt = "sun icon";
         }
         
@@ -187,7 +190,7 @@ docker-compose.yml networks: rustdesk-net: external: false services: hbbs: conta
             <h4 id="水字数"><del>水字数</del></h4>
 <p>RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。<br>
 适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via <a href="https://zh.wikipedia.org/wiki/RustDesk">Wiki</a></p>
-<h4 id="docker-composeyml">docker-compose.yml</h4>
+<p><strong>docker-compose.yml</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">networks</span>:<span style="color:#cbcbcb">
 </span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">rustdesk-net</span>:<span style="color:#cbcbcb">
 </span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">external</span>:<span style="color:#cbcbcb"> </span><span style="color:#2c5dcd;font-weight:bold">false</span><span style="color:#cbcbcb">
@@ -242,19 +245,17 @@ docker-compose.yml networks: rustdesk-net: external: false services: hbbs: conta
                 p-id="3990" fill="#363636"></path>
         </svg>
     </a>
-
+    
     <div class="pp-container">
         <section class="pre-and-post">
             <div class="has-text-left">
                 
-                <p>prev</p>
-                <a href="https://ewjx.fun/post/guide/g2/" class=" hover-underline-animation">PCDN、WebRTC</a>
+                <a href="https://at337am.github.io/post/guide/g2/" class=" hover-underline-animation">上一篇</a>
                 
             </div>
             <div class="has-text-right">
                 
-                <p>next</p>
-                <a href="https://ewjx.fun/post/guide/g4/" class=" hover-underline-animation">v2rayA for Docker</a>
+                <a href="https://at337am.github.io/post/guide/g4/" class=" hover-underline-animation">下一篇</a>
                 
             </div>
         </section>
@@ -263,7 +264,7 @@ docker-compose.yml networks: rustdesk-net: external: false services: hbbs: conta
 </div>
 </main><footer class="footer">
     <div class="content has-text-centered">
-    <span>🎐 嘘，这里有一只酣睡的小猫 <a href="https://ewjx.fun/">ᓚᘏᗢ zZZ</a></span>
+    <span>🎐 嘘，这里有一只酣睡的小猫 <a href="https://at337am.github.io/">ᓚᘏᗢ zZZ</a></span>
     </div>
   </footer></body>
 </html>

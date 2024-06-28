@@ -17,17 +17,17 @@
   <link
     rel="icon"
     type="image/svg+xml"
-    href="https://ewjx.fun/svg/favicon.svg"
+    href="https://at337am.github.io/svg/favicon.svg"
   />
-  <link rel="canonical" href="https://ewjx.fun/" />
+  <link rel="canonical" href="https://at337am.github.io/" />
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css"
   />
   
-  <link rel="stylesheet" href="https://ewjx.fun/scss/style.min.5f4fb9a17c879cecbe57ce7c3a1bf96fdf1184aee1ecaef5f5192d45e73b25eb.css" />
+  <link rel="stylesheet" href="https://at337am.github.io/scss/style.min.bd6933450eebd3517bc183dfdf0b597ae6e44e8b4773da9c6556062d36e70902.css" />
 
-  <meta property="og:url" content="https://ewjx.fun/">
+  <meta property="og:url" content="https://at337am.github.io/">
   <meta property="og:site_name" content="at337am">
   <meta property="og:title" content="at337am">
   <meta property="og:description" content="thank u ~">
@@ -53,7 +53,7 @@
 
             
             <a id="theme-toggle" class="theme-toggle" href="#">
-                <img src="https://ewjx.fun/svg/sun.svg" alt="sun icon" class="theme-icon" />
+                <img src="https://at337am.github.io/svg/sun.svg" alt="sun icon" class="theme-icon" />
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -109,11 +109,11 @@
         let themeIcon = document.querySelector(".theme-icon");
         if (theme === "dark") {
             body.classList.add("dark-mode");
-            themeIcon.src = "https:\/\/ewjx.fun\/svg/moon.svg";
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/moon.svg";
             themeIcon.alt = "moon icon";
         } else {
             body.classList.remove("dark-mode");
-            themeIcon.src = "https:\/\/ewjx.fun\/svg/sun.svg";
+            themeIcon.src = "https:\/\/at337am.github.io\/svg/sun.svg";
             themeIcon.alt = "sun icon";
         }
         
@@ -399,7 +399,8 @@ v2rayA 致力于提供最简单的操作，满足绝大部分需求。
 得益于 Web 客户端的优势，你不仅可以将其用于本地计算机，还可以轻松地将它部署在路由器或 NAS 上。
 项目地址：GitHub
 官方文档：v2rayA
-docker-compose.yml services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: true network_mode: host container_name: v2raya environment: - V2RAYA_LOG_FILE=/tmp/v2raya.log - V2RAYA_V2RAY_BIN=/usr/local/bin/xray - V2RAYA_NFTABLES_SUPPORT=off - IPTABLES_MODE=legacy volumes: - /lib/modules:/lib/modules:ro - /etc/resolv.conf:/etc/resolv.conf - /etc/v2raya:/etc/v2raya 服务启动后，访问 http://localhost:2017 进入管理面板。</div>
+docker-compose.yml
+services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: true network_mode: host container_name: v2raya environment: - V2RAYA_LOG_FILE=/tmp/v2raya.log - V2RAYA_V2RAY_BIN=/usr/local/bin/xray - V2RAYA_NFTABLES_SUPPORT=off - IPTABLES_MODE=legacy volumes: - /lib/modules:/lib/modules:ro - /etc/resolv.conf:/etc/resolv.conf - /etc/v2raya:/etc/v2raya 服务启动后，访问 http://localhost:2017 进入管理面板。</div>
           <div class="post-time-container">
             <span class="post-time">
               2024/05/10 | 📔 食用笔记
@@ -421,7 +422,8 @@ docker-compose.yml services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: alw
         <div class="post-content">
           <div class="excerpt post-summary">水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。
 适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki
-docker-compose.yml networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP</div>
+docker-compose.yml
+networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP</div>
           <div class="post-time-container">
             <span class="post-time">
               2024/04/27 | 📔 食用笔记
@@ -525,7 +527,7 @@ via V2EX - 关闭 Chrome 浏览器 QUIC 协议，让 YouTube 视频更流畅？<
 </div>
 </main><footer class="footer">
     <div class="content has-text-centered">
-    <span>🎐 嘘，这里有一只酣睡的小猫 <a href="https://ewjx.fun/">ᓚᘏᗢ zZZ</a></span>
+    <span>🎐 嘘，这里有一只酣睡的小猫 <a href="https://at337am.github.io/">ᓚᘏᗢ zZZ</a></span>
     </div>
   </footer></body>
 </html>

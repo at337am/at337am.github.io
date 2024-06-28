@@ -417,13 +417,13 @@ services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: tru
     <a href="/post/guide/g3/">
       <div class="archive" id="post-container">
         <header class="post-header">
-          <h4 class="post-title">RustDesk 自建服</h4>
+          <h4 class="post-title">RustDesk for Docker</h4>
         </header>
         <div class="post-content">
           <div class="excerpt post-summary">水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。
 适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki
 docker-compose.yml
-networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP</div>
+networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网IP:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP</div>
           <div class="post-time-container">
             <span class="post-time">
               2024/04/27 | 📔 食用笔记

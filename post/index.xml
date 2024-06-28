@@ -44,11 +44,11 @@
       <description>水字数 v2rayA 是一个支持全局透明代理的 V2Ray 客户端，同时兼容 SS、SSR、Trojan(trojan-go)、Tuic 与 Juicity 协议。&#xA;v2rayA 致力于提供最简单的操作，满足绝大部分需求。&#xA;得益于 Web 客户端的优势，你不仅可以将其用于本地计算机，还可以轻松地将它部署在路由器或 NAS 上。&#xA;项目地址：GitHub&#xA;官方文档：v2rayA&#xA;docker-compose.yml&#xA;services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: true network_mode: host container_name: v2raya environment: - V2RAYA_LOG_FILE=/tmp/v2raya.log - V2RAYA_V2RAY_BIN=/usr/local/bin/xray - V2RAYA_NFTABLES_SUPPORT=off - IPTABLES_MODE=legacy volumes: - /lib/modules:/lib/modules:ro - /etc/resolv.conf:/etc/resolv.conf - /etc/v2raya:/etc/v2raya 服务启动后，访问 http://localhost:2017 进入管理面板。</description>
     </item>
     <item>
-      <title>RustDesk 自建服</title>
+      <title>RustDesk for Docker</title>
       <link>https://at337am.github.io/post/guide/g3/</link>
       <pubDate>Sat, 27 Apr 2024 00:00:01 +0800</pubDate>
       <guid>https://at337am.github.io/post/guide/g3/</guid>
-      <description>水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。&#xA;适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki&#xA;docker-compose.yml&#xA;networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP</description>
+      <description>水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。&#xA;适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki&#xA;docker-compose.yml&#xA;networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网IP:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP</description>
     </item>
     <item>
       <title>PCDN、WebRTC</title>

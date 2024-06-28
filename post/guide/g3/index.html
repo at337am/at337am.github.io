@@ -7,14 +7,14 @@
   />
   
   <title>
-    RustDesk 自建服 | at337am
+    RustDesk for Docker | at337am
   </title>
   <meta
     name="description"
     content="水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。
 适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki
 docker-compose.yml
-networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP"
+networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网IP:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP"
   />
   <link
     rel="icon"
@@ -31,11 +31,11 @@ networks: rustdesk-net: external: false services: hbbs: container_name: hbbs por
 
   <meta property="og:url" content="https://at337am.github.io/post/guide/g3/">
   <meta property="og:site_name" content="at337am">
-  <meta property="og:title" content="RustDesk 自建服">
+  <meta property="og:title" content="RustDesk for Docker">
   <meta property="og:description" content="水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。
 适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki
 docker-compose.yml
-networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP">
+networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网IP:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -43,11 +43,11 @@ networks: rustdesk-net: external: false services: hbbs: container_name: hbbs por
     <meta property="article:modified_time" content="2024-04-27T00:00:01+08:00">
  
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="RustDesk 自建服">
+  <meta name="twitter:title" content="RustDesk for Docker">
   <meta name="twitter:description" content="水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。
 适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki
 docker-compose.yml
-networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网ip地址:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP">
+networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网IP:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP">
  
   
   
@@ -162,7 +162,7 @@ networks: rustdesk-net: external: false services: hbbs: container_name: hbbs por
 
 <div class="single-container">
     <div class="archive">
-        <h1 class="title is-1">RustDesk 自建服</h1>
+        <h1 class="title is-1">RustDesk for Docker</h1>
         <div class="title subtitle heading is-6">
             <div class="author-info columns is-vcentered">
                 <div class="column">
@@ -204,7 +204,7 @@ networks: rustdesk-net: external: false services: hbbs: container_name: hbbs por
 </span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- <span style="color:#5918bb;font-weight:bold">21116</span>:<span style="color:#5918bb;font-weight:bold">21116</span>/udp<span style="color:#cbcbcb">
 </span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- <span style="color:#5918bb;font-weight:bold">21118</span>:<span style="color:#5918bb;font-weight:bold">21118</span><span style="color:#cbcbcb">
 </span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>rustdesk/rustdesk-server:1.1.10-3<span style="color:#cbcbcb">
-</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">command</span>:<span style="color:#cbcbcb"> </span>hbbs -r 公网ip地址:21117<span style="color:#cbcbcb">
+</span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">command</span>:<span style="color:#cbcbcb"> </span>hbbs -r 公网IP:21117<span style="color:#cbcbcb">
 </span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">volumes</span>:<span style="color:#cbcbcb">
 </span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">      </span>- ./data:/root<span style="color:#cbcbcb">
 </span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">networks</span>:<span style="color:#cbcbcb">
@@ -229,7 +229,7 @@ networks: rustdesk-net: external: false services: hbbs: container_name: hbbs por
 <p><img src="https://yzlin.oss-cn-hangzhou.aliyuncs.com/rustdesk.png?x-oss-process=image/resize,w_3600/format,webp" alt="image"></p>
 <p>本人嫌麻烦没有设置 key，详细教程 <a href="https://rustdesk.com/docs/zh-cn">RustDesk 文档</a></p>
 <h5 id="踩坑">踩坑</h5>
-<p>云服务器的入站规则需要开启 udp 端口和 tcp 端口：21115-21119</p>
+<p>云服务器的入站规则需放行 udp 端口和 tcp 端口：21115-21119</p>
 
         </div>
     </div>

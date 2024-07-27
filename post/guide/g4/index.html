@@ -11,12 +11,7 @@
   </title>
   <meta
     name="description"
-    content="水字数 v2rayA 是一个支持全局透明代理的 V2Ray 客户端，同时兼容 SS、SSR、Trojan(trojan-go)、Tuic 与 Juicity 协议。
-v2rayA 致力于提供最简单的操作，满足绝大部分需求。
-得益于 Web 客户端的优势，你不仅可以将其用于本地计算机，还可以轻松地将它部署在路由器或 NAS 上。
-项目地址：GitHub
-官方文档：v2rayA
-docker-compose.yml
+    content="docker-compose.yml
 services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: true network_mode: host container_name: v2raya environment: - V2RAYA_LOG_FILE=/tmp/v2raya.log - V2RAYA_V2RAY_BIN=/usr/local/bin/xray - V2RAYA_NFTABLES_SUPPORT=off - IPTABLES_MODE=legacy volumes: - /lib/modules:/lib/modules:ro - /etc/resolv.conf:/etc/resolv.conf - /etc/v2raya:/etc/v2raya 服务启动后，访问 http://localhost:2017 进入管理面板。"
   />
   <link
@@ -35,12 +30,7 @@ services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: tru
   <meta property="og:url" content="https://at337am.github.io/post/guide/g4/">
   <meta property="og:site_name" content="at337am">
   <meta property="og:title" content="v2rayA for Docker">
-  <meta property="og:description" content="水字数 v2rayA 是一个支持全局透明代理的 V2Ray 客户端，同时兼容 SS、SSR、Trojan(trojan-go)、Tuic 与 Juicity 协议。
-v2rayA 致力于提供最简单的操作，满足绝大部分需求。
-得益于 Web 客户端的优势，你不仅可以将其用于本地计算机，还可以轻松地将它部署在路由器或 NAS 上。
-项目地址：GitHub
-官方文档：v2rayA
-docker-compose.yml
+  <meta property="og:description" content="docker-compose.yml
 services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: true network_mode: host container_name: v2raya environment: - V2RAYA_LOG_FILE=/tmp/v2raya.log - V2RAYA_V2RAY_BIN=/usr/local/bin/xray - V2RAYA_NFTABLES_SUPPORT=off - IPTABLES_MODE=legacy volumes: - /lib/modules:/lib/modules:ro - /etc/resolv.conf:/etc/resolv.conf - /etc/v2raya:/etc/v2raya 服务启动后，访问 http://localhost:2017 进入管理面板。">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
@@ -50,12 +40,7 @@ services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: tru
  
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="v2rayA for Docker">
-  <meta name="twitter:description" content="水字数 v2rayA 是一个支持全局透明代理的 V2Ray 客户端，同时兼容 SS、SSR、Trojan(trojan-go)、Tuic 与 Juicity 协议。
-v2rayA 致力于提供最简单的操作，满足绝大部分需求。
-得益于 Web 客户端的优势，你不仅可以将其用于本地计算机，还可以轻松地将它部署在路由器或 NAS 上。
-项目地址：GitHub
-官方文档：v2rayA
-docker-compose.yml
+  <meta name="twitter:description" content="docker-compose.yml
 services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: true network_mode: host container_name: v2raya environment: - V2RAYA_LOG_FILE=/tmp/v2raya.log - V2RAYA_V2RAY_BIN=/usr/local/bin/xray - V2RAYA_NFTABLES_SUPPORT=off - IPTABLES_MODE=legacy volumes: - /lib/modules:/lib/modules:ro - /etc/resolv.conf:/etc/resolv.conf - /etc/v2raya:/etc/v2raya 服务启动后，访问 http://localhost:2017 进入管理面板。">
  
   
@@ -196,13 +181,7 @@ services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: tru
             </div>
         </div>
         <div class="content article-content">
-            <h5 id="水字数"><del>水字数</del></h5>
-<p>v2rayA 是一个支持全局透明代理的 V2Ray 客户端，同时兼容 SS、SSR、Trojan(trojan-go)、Tuic 与 Juicity 协议。</p>
-<p>v2rayA 致力于提供最简单的操作，满足绝大部分需求。</p>
-<p>得益于 Web 客户端的优势，你不仅可以将其用于本地计算机，还可以轻松地将它部署在路由器或 NAS 上。</p>
-<p>项目地址：<a href="https://github.com/v2rayA/v2rayA">GitHub</a></p>
-<p>官方文档：<a href="https://v2raya.org">v2rayA</a></p>
-<p><strong>docker-compose.yml</strong></p>
+            <p><strong>docker-compose.yml</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#4d4d4d;background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#2c5dcd;font-weight:bold">services</span>:<span style="color:#cbcbcb">
 </span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">  </span><span style="color:#2c5dcd;font-weight:bold">v2raya</span>:<span style="color:#cbcbcb">
 </span></span></span><span style="display:flex;"><span><span style="color:#cbcbcb">    </span><span style="color:#2c5dcd;font-weight:bold">image</span>:<span style="color:#cbcbcb"> </span>mzz2017/v2raya:v2.2.5.1<span style="color:#cbcbcb">

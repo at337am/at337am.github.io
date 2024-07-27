@@ -281,17 +281,17 @@
 <div class="summary">  <article class="post">
   
   <div class="single-container column is-centered">
-    <a href="/post/misc/m3/">
+    <a href="/post/misc/m2/">
       <div class="archive" id="post-container">
         <header class="post-header">
-          <h4 class="post-title">各种... 记忆方法</h4>
+          <h4 class="post-title">世界上最困难的迷宫</h4>
         </header>
         <div class="post-content">
-          <div class="excerpt post-summary">现代人有点太喜欢往自己脑子里放奇怪的东西了。 从小开始，书里就有一些奇怪的记忆法，什么生肖儿歌，取首字母组合之类的。 面对成年人也有离谱小故事记单词，音乐学习法，记忆宫殿这种成年人的玩法。
-效果确实很好，不过我宁愿自己脑子空空的，也不想往自己记忆里放这种奇怪的东西。 完全不想要 从某个单词就立马想到各种乱交、杀人小故事或者脑子里响起奇怪的音乐。</div>
+          <div class="excerpt post-summary">看到一篇有点意思的文章
+来源</div>
           <div class="post-time-container">
             <span class="post-time">
-              2024/06/20 | 💭 随便写写
+              2024/07/13 | 💭 随便写写
             </span>
           </div>
         </div>
@@ -321,33 +321,6 @@ Logo Galleria
           <div class="post-time-container">
             <span class="post-time">
               2024/06/13 | 🍥 冲浪分享
-            </span>
-          </div>
-        </div>
-      </div>
-    </a>
-  </div>
-</article>
-  <article class="post">
-  
-  <div class="single-container column is-centered">
-    <a href="/post/misc/m2/">
-      <div class="archive" id="post-container">
-        <header class="post-header">
-          <h4 class="post-title">茧中十二年 Office</h4>
-        </header>
-        <div class="post-content">
-          <div class="excerpt post-summary">小学的电脑课：学生乱玩，老师乱讲
-初中的电脑课：学生乱玩，老师讲 Office 三件套
-高中的电脑课：学生乱玩，老师讲 Office 三件套
-大学的学生：C 盘满了怎么办？压缩包怎么解压不了？电脑怎么重装？
-还需要大学专门开一门计算机基础课来填补空白，但是还是 Office 三件套
-就……Word、Excel、PPT 贯穿了整个 12 年义务教育和大学计算机基础课，也不去教一些 Windows 基础操作、常见文件格式及其打开方式、常见计算机问题处理办法、重装系统等一系列应该在十二年义务教育中被教会的内容。
-应试教育虽然不好，但要是作用在计算机基础操作和排障上也不至于导致现在大学生的基础知识这么匮乏。
-软件使用方法没有那么重要，只要学会了基础的互联网检索，软件怎么用自然有视频教程和文字教程，计算机基础才是最致命的问题。</div>
-          <div class="post-time-container">
-            <span class="post-time">
-              2024/06/06 | 💭 随便写写
             </span>
           </div>
         </div>
@@ -391,12 +364,7 @@ Logo Galleria
           <h4 class="post-title">v2rayA for Docker</h4>
         </header>
         <div class="post-content">
-          <div class="excerpt post-summary">水字数 v2rayA 是一个支持全局透明代理的 V2Ray 客户端，同时兼容 SS、SSR、Trojan(trojan-go)、Tuic 与 Juicity 协议。
-v2rayA 致力于提供最简单的操作，满足绝大部分需求。
-得益于 Web 客户端的优势，你不仅可以将其用于本地计算机，还可以轻松地将它部署在路由器或 NAS 上。
-项目地址：GitHub
-官方文档：v2rayA
-docker-compose.yml
+          <div class="excerpt post-summary">docker-compose.yml
 services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: true network_mode: host container_name: v2raya environment: - V2RAYA_LOG_FILE=/tmp/v2raya.log - V2RAYA_V2RAY_BIN=/usr/local/bin/xray - V2RAYA_NFTABLES_SUPPORT=off - IPTABLES_MODE=legacy volumes: - /lib/modules:/lib/modules:ro - /etc/resolv.conf:/etc/resolv.conf - /etc/v2raya:/etc/v2raya 服务启动后，访问 http://localhost:2017 进入管理面板。</div>
           <div class="post-time-container">
             <span class="post-time">
@@ -417,10 +385,10 @@ services: v2raya: image: mzz2017/v2raya:v2.2.5.1 restart: always privileged: tru
           <h4 class="post-title">RustDesk for Docker</h4>
         </header>
         <div class="post-content">
-          <div class="excerpt post-summary">水字数 RustDesk 是一款远程访问和远程控制软件，主要由 Rust 编写，可以远程维护计算机和其他设备。
-适用于 Windows、macOS、iOS、Android 和 Linux 等操作系统。 via Wiki
-docker-compose.yml
-networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网IP:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP</div>
+          <div class="excerpt post-summary">docker-compose.yml
+networks: rustdesk-net: external: false services: hbbs: container_name: hbbs ports: - 21115:21115 - 21116:21116 - 21116:21116/udp - 21118:21118 image: rustdesk/rustdesk-server:1.1.10-3 command: hbbs -r 公网IP:21117 volumes: - ./data:/root networks: - rustdesk-net depends_on: - hbbr restart: unless-stopped hbbr: container_name: hbbr ports: - 21117:21117 - 21119:21119 image: rustdesk/rustdesk-server:latest command: hbbr volumes: - ./data:/root networks: - rustdesk-net restart: unless-stopped 服务启动后，在 RustDesk 中设置，填入服务器 IP
+本人嫌麻烦没有设置 key，详细教程 RustDesk 文档
+踩坑 云服务器的入站规则需放行 udp 端口和 tcp 端口：21115-21119</div>
           <div class="post-time-container">
             <span class="post-time">
               2024/04/27 | 📔 食用笔记
